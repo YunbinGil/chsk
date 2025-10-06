@@ -1,0 +1,2535 @@
+fileFormatVersion: 2
+guid: 3fe2b7c29bf5ee041a8b229146b2d2a4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1814910386695882889
+    second: Color_backgrounds_b (32x32)_0
+  - first:
+      213: 7404943956381160690
+    second: Color_backgrounds_b (32x32)_1
+  - first:
+      213: 5849031124733285850
+    second: Color_backgrounds_b (32x32)_2
+  - first:
+      213: -8383932733739647962
+    second: Color_backgrounds_b (32x32)_3
+  - first:
+      213: -3975861148466887256
+    second: Color_backgrounds_b (32x32)_4
+  - first:
+      213: 5722024813627441639
+    second: Color_backgrounds_b (32x32)_5
+  - first:
+      213: 7050868935590469114
+    second: Color_backgrounds_b (32x32)_6
+  - first:
+      213: -5998989726522100368
+    second: Color_backgrounds_b (32x32)_7
+  - first:
+      213: 1997611283343045738
+    second: Color_backgrounds_b (32x32)_8
+  - first:
+      213: -3885141153920425057
+    second: Color_backgrounds_b (32x32)_9
+  - first:
+      213: -8776947272048852538
+    second: Color_backgrounds_b (32x32)_10
+  - first:
+      213: -7284412795874002534
+    second: Color_backgrounds_b (32x32)_11
+  - first:
+      213: -4305107483767703511
+    second: Color_backgrounds_b (32x32)_12
+  - first:
+      213: 153143238881985093
+    second: Color_backgrounds_b (32x32)_13
+  - first:
+      213: -2506914559173123153
+    second: Color_backgrounds_b (32x32)_14
+  - first:
+      213: 3713994234012657153
+    second: Color_backgrounds_b (32x32)_15
+  - first:
+      213: 1478809800335918859
+    second: Color_backgrounds_b (32x32)_16
+  - first:
+      213: -1699825393981888601
+    second: Color_backgrounds_b (32x32)_17
+  - first:
+      213: 1087439916114230393
+    second: Color_backgrounds_b (32x32)_18
+  - first:
+      213: -2010297234023147255
+    second: Color_backgrounds_b (32x32)_19
+  - first:
+      213: 1972880224452931231
+    second: Color_backgrounds_b (32x32)_20
+  - first:
+      213: 3732499710344981952
+    second: Color_backgrounds_b (32x32)_21
+  - first:
+      213: -1350653601565495261
+    second: Color_backgrounds_b (32x32)_22
+  - first:
+      213: -5075684271598721682
+    second: Color_backgrounds_b (32x32)_23
+  - first:
+      213: 666666227216131891
+    second: Color_backgrounds_b (32x32)_24
+  - first:
+      213: 6750121048093475112
+    second: Color_backgrounds_b (32x32)_25
+  - first:
+      213: -3739754125352462478
+    second: Color_backgrounds_b (32x32)_26
+  - first:
+      213: -2855531708898018068
+    second: Color_backgrounds_b (32x32)_27
+  - first:
+      213: -9047929613030489378
+    second: Color_backgrounds_b (32x32)_28
+  - first:
+      213: -1924673558723130406
+    second: Color_backgrounds_b (32x32)_29
+  - first:
+      213: -3537497889536661771
+    second: Color_backgrounds_b (32x32)_30
+  - first:
+      213: 509065380793672440
+    second: Color_backgrounds_b (32x32)_31
+  - first:
+      213: -4731243503105982266
+    second: Color_backgrounds_b (32x32)_32
+  - first:
+      213: 8850380563113742752
+    second: Color_backgrounds_b (32x32)_33
+  - first:
+      213: -5937701525211003002
+    second: Color_backgrounds_b (32x32)_34
+  - first:
+      213: 2692896390126797266
+    second: Color_backgrounds_b (32x32)_35
+  - first:
+      213: -4645451039620387214
+    second: Color_backgrounds_b (32x32)_36
+  - first:
+      213: 2279380935492823697
+    second: Color_backgrounds_b (32x32)_37
+  - first:
+      213: -4382570197438084636
+    second: Color_backgrounds_b (32x32)_38
+  - first:
+      213: 4085865277867992916
+    second: Color_backgrounds_b (32x32)_39
+  - first:
+      213: -5830352792777296599
+    second: Color_backgrounds_b (32x32)_40
+  - first:
+      213: 5704756264379259402
+    second: Color_backgrounds_b (32x32)_41
+  - first:
+      213: -3009617810486885396
+    second: Color_backgrounds_b (32x32)_42
+  - first:
+      213: -1399422809738758602
+    second: Color_backgrounds_b (32x32)_43
+  - first:
+      213: -4032831695379975451
+    second: Color_backgrounds_b (32x32)_44
+  - first:
+      213: 520133938364490845
+    second: Color_backgrounds_b (32x32)_45
+  - first:
+      213: 4481437189374511151
+    second: Color_backgrounds_b (32x32)_46
+  - first:
+      213: 2703288370071274471
+    second: Color_backgrounds_b (32x32)_47
+  - first:
+      213: 3941644842392107889
+    second: Color_backgrounds_b (32x32)_48
+  - first:
+      213: -4047125677965679755
+    second: Color_backgrounds_b (32x32)_49
+  - first:
+      213: -4649136877712433038
+    second: Color_backgrounds_b (32x32)_50
+  - first:
+      213: 7573078190206679722
+    second: Color_backgrounds_b (32x32)_51
+  - first:
+      213: -4007961847069573133
+    second: Color_backgrounds_b (32x32)_52
+  - first:
+      213: 5292554204484780418
+    second: Color_backgrounds_b (32x32)_53
+  - first:
+      213: 7239686603920365823
+    second: Color_backgrounds_b (32x32)_54
+  - first:
+      213: 9047207905822965198
+    second: Color_backgrounds_b (32x32)_55
+  - first:
+      213: 6693690255059145579
+    second: Color_backgrounds_b (32x32)_56
+  - first:
+      213: -8366340904642663981
+    second: Color_backgrounds_b (32x32)_57
+  - first:
+      213: 7448469977144800494
+    second: Color_backgrounds_b (32x32)_58
+  - first:
+      213: -3736697179270528211
+    second: Color_backgrounds_b (32x32)_59
+  - first:
+      213: 2436779460141438842
+    second: Color_backgrounds_b (32x32)_60
+  - first:
+      213: 6846380358961216802
+    second: Color_backgrounds_b (32x32)_61
+  - first:
+      213: -7494642147093308105
+    second: Color_backgrounds_b (32x32)_62
+  - first:
+      213: 1136988425156782333
+    second: Color_backgrounds_b (32x32)_63
+  - first:
+      213: -8059603534745878975
+    second: Color_backgrounds_b (32x32)_64
+  - first:
+      213: 5660107810324273894
+    second: Color_backgrounds_b (32x32)_65
+  - first:
+      213: 1924587099205942966
+    second: Color_backgrounds_b (32x32)_66
+  - first:
+      213: 169428588590680248
+    second: Color_backgrounds_b (32x32)_67
+  - first:
+      213: -4902547941564121842
+    second: Color_backgrounds_b (32x32)_68
+  - first:
+      213: -493074393148094002
+    second: Color_backgrounds_b (32x32)_69
+  - first:
+      213: 1910231288482875805
+    second: Color_backgrounds_b (32x32)_70
+  - first:
+      213: 8531278427948907147
+    second: Color_backgrounds_b (32x32)_71
+  - first:
+      213: 6784464910371266543
+    second: Color_backgrounds_b (32x32)_72
+  - first:
+      213: -9983264205286438
+    second: Color_backgrounds_b (32x32)_73
+  - first:
+      213: 4721437056970092772
+    second: Color_backgrounds_b (32x32)_74
+  - first:
+      213: 7091742631704317857
+    second: Color_backgrounds_b (32x32)_75
+  - first:
+      213: -4195762506982230232
+    second: Color_backgrounds_b (32x32)_76
+  - first:
+      213: 1876924464010013211
+    second: Color_backgrounds_b (32x32)_77
+  - first:
+      213: 3226481941960177975
+    second: Color_backgrounds_b (32x32)_78
+  - first:
+      213: -8875104909883234959
+    second: Color_backgrounds_b (32x32)_79
+  - first:
+      213: -2178734893408062811
+    second: Color_backgrounds_b (32x32)_80
+  - first:
+      213: -5261718888080924486
+    second: Color_backgrounds_b (32x32)_81
+  - first:
+      213: 2396895132212565838
+    second: Color_backgrounds_b (32x32)_82
+  - first:
+      213: 6985648787664584279
+    second: Color_backgrounds_b (32x32)_83
+  - first:
+      213: 4654466963520845295
+    second: Color_backgrounds_b (32x32)_84
+  - first:
+      213: -8627709101249176880
+    second: Color_backgrounds_b (32x32)_85
+  - first:
+      213: 7872858999699345408
+    second: Color_backgrounds_b (32x32)_86
+  - first:
+      213: -4308158313109934692
+    second: Color_backgrounds_b (32x32)_87
+  - first:
+      213: -702152097862931421
+    second: Color_backgrounds_b (32x32)_88
+  - first:
+      213: 5794763633886748691
+    second: Color_backgrounds_b (32x32)_89
+  - first:
+      213: -4547496617033524754
+    second: Color_backgrounds_b (32x32)_90
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 204
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 988cc22816bdf2910800000000000000
+      internalID: 1814910386695882889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 170
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f456c59b45a3c660800000000000000
+      internalID: 7404943956381160690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_2
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 204
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad55ee581deeb2150800000000000000
+      internalID: 5849031124733285850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_3
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 170
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62cbda0499946ab80800000000000000
+      internalID: -8383932733739647962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_4
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 204
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a5ca59b957e2d8c0800000000000000
+      internalID: -3975861148466887256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_5
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 170
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e10c3c5047b86f40800000000000000
+      internalID: 5722024813627441639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_6
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 204
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afdd4b790f7b9d160800000000000000
+      internalID: 7050868935590469114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_7
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 170
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 075be63b0ae4fbca0800000000000000
+      internalID: -5998989726522100368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_8
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 204
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6479fed0e0f8bb10800000000000000
+      internalID: 1997611283343045738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_9
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 170
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f93625274b4351ac0800000000000000
+      internalID: -3885141153920425057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_10
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 204
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c1c13555f4023680800000000000000
+      internalID: -8776947272048852538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_11
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 170
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a99be98182198ea90800000000000000
+      internalID: -7284412795874002534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_12
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 204
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 928762e8d8f2144c0800000000000000
+      internalID: -4305107483767703511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_13
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 170
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5424051e6f2102200800000000000000
+      internalID: 153143238881985093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_14
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 204
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa32b3a9d76a53dd0800000000000000
+      internalID: -2506914559173123153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_15
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 170
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1066c280412ca8330800000000000000
+      internalID: 3713994234012657153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_16
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 204
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b078367ada9c58410800000000000000
+      internalID: 1478809800335918859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_17
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 170
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a7658b6fc10968e0800000000000000
+      internalID: -1699825393981888601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_18
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 204
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97cb19a97dc571f00800000000000000
+      internalID: 1087439916114230393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_19
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 170
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9099911115df914e0800000000000000
+      internalID: -2010297234023147255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_20
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 204
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9ee8e28c14116b10800000000000000
+      internalID: 1972880224452931231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_21
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 170
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cd6c5ff5b08cc330800000000000000
+      internalID: 3732499710344981952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_22
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 204
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 320361894b3814de0800000000000000
+      internalID: -1350653601565495261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_23
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 170
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e65225f0c0c8f89b0800000000000000
+      internalID: -5075684271598721682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_24
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 204
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 337a7f8c669704900800000000000000
+      internalID: 666666227216131891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_25
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 170
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 821cf7e545f3dad50800000000000000
+      internalID: 6750121048093475112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 136
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2779013ef69b91cc0800000000000000
+      internalID: -3739754125352462478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 102
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cecf44e3a0d1f58d0800000000000000
+      internalID: -2855531708898018068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_28
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 136
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed2849674fb4f6280800000000000000
+      internalID: -9047929613030489378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_29
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 102
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adb88bf789f2a45e0800000000000000
+      internalID: -1924673558723130406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_30
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 136
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f62974796848eec0800000000000000
+      internalID: -3537497889536661771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_31
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 102
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f2e7a54440901700800000000000000
+      internalID: 509065380793672440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_32
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 136
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c04e73e91f375eb0800000000000000
+      internalID: -4731243503105982266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_33
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 102
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a19a671b3ed2da70800000000000000
+      internalID: 8850380563113742752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_34
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 136
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 687c08f0ceb099da0800000000000000
+      internalID: -5937701525211003002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_35
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 102
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d1807ecff61f5520800000000000000
+      internalID: 2692896390126797266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_36
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 136
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27e25f164ea088fb0800000000000000
+      internalID: -4645451039620387214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_37
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 102
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19ae8d752ecf1af10800000000000000
+      internalID: 2279380935492823697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_38
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 136
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e94d7210abfd23c0800000000000000
+      internalID: -4382570197438084636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_39
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 102
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 457ac6782d8e3b830800000000000000
+      internalID: 4085865277867992916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_40
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 136
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9257d47860d661fa0800000000000000
+      internalID: -5830352792777296599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_41
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 102
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0a928ce89d5b2f40800000000000000
+      internalID: 5704756264379259402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_42
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 136
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce38d380c80bb36d0800000000000000
+      internalID: -3009617810486885396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_43
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 102
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63631f67e50449ce0800000000000000
+      internalID: -1399422809738758602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_44
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 136
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e2b0fd90f08808c0800000000000000
+      internalID: -4032831695379975451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_45
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 102
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5427d7af03e73700800000000000000
+      internalID: 520133938364490845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_46
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 136
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2884eb4163413e30800000000000000
+      internalID: 4481437189374511151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_47
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 102
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e30b8f2372048520800000000000000
+      internalID: 2703288370071274471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_48
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 136
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17b3885b91983b630800000000000000
+      internalID: 3941644842392107889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_49
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 102
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5736e7373a8b5d7c0800000000000000
+      internalID: -4047125677965679755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_50
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 136
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27028c354a2fa7fb0800000000000000
+      internalID: -4649136877712433038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_51
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 102
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaaf6877d7af81960800000000000000
+      internalID: 7573078190206679722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 68
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ff79186febd068c0800000000000000
+      internalID: -4007961847069573133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_53
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 34
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 281c0d0020ee27940800000000000000
+      internalID: 5292554204484780418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_54
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 68
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff8d3d7db98887460800000000000000
+      internalID: 7239686603920365823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_55
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 34
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecdfeabf7a32e8d70800000000000000
+      internalID: 9047207905822965198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_56
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 68
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b635b4182d3c4ec50800000000000000
+      internalID: 6693690255059145579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_57
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 34
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d924f42649c4eb80800000000000000
+      internalID: -8366340904642663981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_58
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 68
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee4b0e30bf74e5760800000000000000
+      internalID: 7448469977144800494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_59
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 34
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d23406c96b5942cc0800000000000000
+      internalID: -3736697179270528211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_60
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 68
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a77d2b5220e21d120800000000000000
+      internalID: 2436779460141438842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_61
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 34
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22d381da9aa330f50800000000000000
+      internalID: 6846380358961216802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_62
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 68
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73d15dfecaeadf790800000000000000
+      internalID: -7494642147093308105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_63
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 34
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df8633bd2f467cf00800000000000000
+      internalID: 1136988425156782333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_64
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 68
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14e3df86949862090800000000000000
+      internalID: -8059603534745878975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_65
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 34
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6eadac0a01ebc8e40800000000000000
+      internalID: 5660107810324273894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_66
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 68
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6be387315c185ba10800000000000000
+      internalID: 1924587099205942966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_67
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 34
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b84eb5576ee95200800000000000000
+      internalID: 169428588590680248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_68
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 68
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0d7fb83f96a6fbb0800000000000000
+      internalID: -4902547941564121842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_69
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 34
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec9019ca37f3829f0800000000000000
+      internalID: -493074393148094002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_70
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 68
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d99cbdc6c31828a10800000000000000
+      internalID: 1910231288482875805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_71
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 34
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8af8d19780356670800000000000000
+      internalID: 8531278427948907147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_72
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 68
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fef18cde3e2472e50800000000000000
+      internalID: 6784464910371266543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_73
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 34
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad3585b26488cdff0800000000000000
+      internalID: -9983264205286438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_74
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 68
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e07112fcf9e58140800000000000000
+      internalID: 4721437056970092772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_75
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 34
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1afca31995eea6260800000000000000
+      internalID: 7091742631704317857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_76
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 68
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 827fb61ea38a5c5c0800000000000000
+      internalID: -4195762506982230232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_77
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 34
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1aae8b0bdc2c0a10800000000000000
+      internalID: 1876924464010013211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_78
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 739bfb84b34c6cc20800000000000000
+      internalID: 3226481941960177975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_79
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 175a5165b1b45d480800000000000000
+      internalID: -8875104909883234959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_80
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a2f9aa682493c1e0800000000000000
+      internalID: -2178734893408062811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_81
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab029ff8c8e9af6b0800000000000000
+      internalID: -5261718888080924486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_82
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4794676c6b734120800000000000000
+      internalID: 2396895132212565838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_83
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75eb2629f8202f060800000000000000
+      internalID: 6985648787664584279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_84
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe5737bfa0df79040800000000000000
+      internalID: 4654466963520845295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_85
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0da53a2b848344880800000000000000
+      internalID: -8627709101249176880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_86
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00011db4c83024d60800000000000000
+      internalID: 7872858999699345408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_87
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9dafeef6d85634c0800000000000000
+      internalID: -4308158313109934692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_88
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32ca59c13647146f0800000000000000
+      internalID: -702152097862931421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_89
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 310eb23b2d22b6050800000000000000
+      internalID: 5794763633886748691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Color_backgrounds_b (32x32)_90
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee91d64abeb04e0c0800000000000000
+      internalID: -4547496617033524754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Color_backgrounds_b (32x32)_0: 1814910386695882889
+      Color_backgrounds_b (32x32)_1: 7404943956381160690
+      Color_backgrounds_b (32x32)_10: -8776947272048852538
+      Color_backgrounds_b (32x32)_11: -7284412795874002534
+      Color_backgrounds_b (32x32)_12: -4305107483767703511
+      Color_backgrounds_b (32x32)_13: 153143238881985093
+      Color_backgrounds_b (32x32)_14: -2506914559173123153
+      Color_backgrounds_b (32x32)_15: 3713994234012657153
+      Color_backgrounds_b (32x32)_16: 1478809800335918859
+      Color_backgrounds_b (32x32)_17: -1699825393981888601
+      Color_backgrounds_b (32x32)_18: 1087439916114230393
+      Color_backgrounds_b (32x32)_19: -2010297234023147255
+      Color_backgrounds_b (32x32)_2: 5849031124733285850
+      Color_backgrounds_b (32x32)_20: 1972880224452931231
+      Color_backgrounds_b (32x32)_21: 3732499710344981952
+      Color_backgrounds_b (32x32)_22: -1350653601565495261
+      Color_backgrounds_b (32x32)_23: -5075684271598721682
+      Color_backgrounds_b (32x32)_24: 666666227216131891
+      Color_backgrounds_b (32x32)_25: 6750121048093475112
+      Color_backgrounds_b (32x32)_26: -3739754125352462478
+      Color_backgrounds_b (32x32)_27: -2855531708898018068
+      Color_backgrounds_b (32x32)_28: -9047929613030489378
+      Color_backgrounds_b (32x32)_29: -1924673558723130406
+      Color_backgrounds_b (32x32)_3: -8383932733739647962
+      Color_backgrounds_b (32x32)_30: -3537497889536661771
+      Color_backgrounds_b (32x32)_31: 509065380793672440
+      Color_backgrounds_b (32x32)_32: -4731243503105982266
+      Color_backgrounds_b (32x32)_33: 8850380563113742752
+      Color_backgrounds_b (32x32)_34: -5937701525211003002
+      Color_backgrounds_b (32x32)_35: 2692896390126797266
+      Color_backgrounds_b (32x32)_36: -4645451039620387214
+      Color_backgrounds_b (32x32)_37: 2279380935492823697
+      Color_backgrounds_b (32x32)_38: -4382570197438084636
+      Color_backgrounds_b (32x32)_39: 4085865277867992916
+      Color_backgrounds_b (32x32)_4: -3975861148466887256
+      Color_backgrounds_b (32x32)_40: -5830352792777296599
+      Color_backgrounds_b (32x32)_41: 5704756264379259402
+      Color_backgrounds_b (32x32)_42: -3009617810486885396
+      Color_backgrounds_b (32x32)_43: -1399422809738758602
+      Color_backgrounds_b (32x32)_44: -4032831695379975451
+      Color_backgrounds_b (32x32)_45: 520133938364490845
+      Color_backgrounds_b (32x32)_46: 4481437189374511151
+      Color_backgrounds_b (32x32)_47: 2703288370071274471
+      Color_backgrounds_b (32x32)_48: 3941644842392107889
+      Color_backgrounds_b (32x32)_49: -4047125677965679755
+      Color_backgrounds_b (32x32)_5: 5722024813627441639
+      Color_backgrounds_b (32x32)_50: -4649136877712433038
+      Color_backgrounds_b (32x32)_51: 7573078190206679722
+      Color_backgrounds_b (32x32)_52: -4007961847069573133
+      Color_backgrounds_b (32x32)_53: 5292554204484780418
+      Color_backgrounds_b (32x32)_54: 7239686603920365823
+      Color_backgrounds_b (32x32)_55: 9047207905822965198
+      Color_backgrounds_b (32x32)_56: 6693690255059145579
+      Color_backgrounds_b (32x32)_57: -8366340904642663981
+      Color_backgrounds_b (32x32)_58: 7448469977144800494
+      Color_backgrounds_b (32x32)_59: -3736697179270528211
+      Color_backgrounds_b (32x32)_6: 7050868935590469114
+      Color_backgrounds_b (32x32)_60: 2436779460141438842
+      Color_backgrounds_b (32x32)_61: 6846380358961216802
+      Color_backgrounds_b (32x32)_62: -7494642147093308105
+      Color_backgrounds_b (32x32)_63: 1136988425156782333
+      Color_backgrounds_b (32x32)_64: -8059603534745878975
+      Color_backgrounds_b (32x32)_65: 5660107810324273894
+      Color_backgrounds_b (32x32)_66: 1924587099205942966
+      Color_backgrounds_b (32x32)_67: 169428588590680248
+      Color_backgrounds_b (32x32)_68: -4902547941564121842
+      Color_backgrounds_b (32x32)_69: -493074393148094002
+      Color_backgrounds_b (32x32)_7: -5998989726522100368
+      Color_backgrounds_b (32x32)_70: 1910231288482875805
+      Color_backgrounds_b (32x32)_71: 8531278427948907147
+      Color_backgrounds_b (32x32)_72: 6784464910371266543
+      Color_backgrounds_b (32x32)_73: -9983264205286438
+      Color_backgrounds_b (32x32)_74: 4721437056970092772
+      Color_backgrounds_b (32x32)_75: 7091742631704317857
+      Color_backgrounds_b (32x32)_76: -4195762506982230232
+      Color_backgrounds_b (32x32)_77: 1876924464010013211
+      Color_backgrounds_b (32x32)_78: 3226481941960177975
+      Color_backgrounds_b (32x32)_79: -8875104909883234959
+      Color_backgrounds_b (32x32)_8: 1997611283343045738
+      Color_backgrounds_b (32x32)_80: -2178734893408062811
+      Color_backgrounds_b (32x32)_81: -5261718888080924486
+      Color_backgrounds_b (32x32)_82: 2396895132212565838
+      Color_backgrounds_b (32x32)_83: 6985648787664584279
+      Color_backgrounds_b (32x32)_84: 4654466963520845295
+      Color_backgrounds_b (32x32)_85: -8627709101249176880
+      Color_backgrounds_b (32x32)_86: 7872858999699345408
+      Color_backgrounds_b (32x32)_87: -4308158313109934692
+      Color_backgrounds_b (32x32)_88: -702152097862931421
+      Color_backgrounds_b (32x32)_89: 5794763633886748691
+      Color_backgrounds_b (32x32)_9: -3885141153920425057
+      Color_backgrounds_b (32x32)_90: -4547496617033524754
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
