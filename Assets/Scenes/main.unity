@@ -422,7 +422,7 @@ GameObject:
   - component: {fileID: 155730226}
   - component: {fileID: 155730228}
   m_Layer: 5
-  m_Name: gold_txt
+  m_Name: ice_txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -560,6 +560,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   text: {fileID: 155730226}
+  abbreviate: 0
+  prefix: 
+  suffix: 
 --- !u!1 &163458640
 GameObject:
   m_ObjectHideFlags: 0
@@ -592,8 +595,8 @@ RectTransform:
   m_Children:
   - {fileID: 1824488314}
   - {fileID: 1074716645}
-  - {fileID: 155730225}
   - {fileID: 540697937}
+  - {fileID: 155730225}
   m_Father: {fileID: 1616307342}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1485,7 +1488,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 366593404}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -2024,7 +2027,7 @@ GameObject:
   - component: {fileID: 540697938}
   - component: {fileID: 540697940}
   m_Layer: 5
-  m_Name: ice_txt
+  m_Name: gold_txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2162,6 +2165,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   text: {fileID: 540697938}
+  abbreviate: 0
+  prefix: 
+  suffix: 
 --- !u!1001 &602662119
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7294,7 +7300,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1094526854}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.42702574
+  m_Size: 0.64053863
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
