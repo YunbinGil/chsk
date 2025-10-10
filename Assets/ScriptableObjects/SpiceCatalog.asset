@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: SpiceCatalog
+  m_EditorClassIdentifier: Assembly-CSharp::SpiceCatalog
+  items:
+  - spiceId: cherry
+    displayName: "\uCCB4\uB9AC"
+    priceGold: 10
+    icon: {fileID: -2413327356150862669, guid: 8654775db63078a4a9ec8eabfd99bafa, type: 3}
+  - spiceId: strawberry
+    displayName: "\uB538\uAE30"
+    priceGold: 10
+    icon: {fileID: 6361413248432730260, guid: 8654775db63078a4a9ec8eabfd99bafa, type: 3}

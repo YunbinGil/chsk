@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uCCB4\uB9AC\n"
+  m_text: "\uD5A5\uC2E0\uB8CC\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 536bc3ea25bada643a5d94e016423bdb, type: 2}
   m_sharedMaterial: {fileID: 1486117655677625215, guid: 536bc3ea25bada643a5d94e016423bdb, type: 2}
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -32.406, y: 0, z: -32.897003, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -166,6 +166,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6168039638421091259}
+  - component: {fileID: 2557123634250597542}
+  - component: {fileID: -1131195344507684972}
   m_Layer: 0
   m_Name: ShopCell
   m_TagString: Untagged
@@ -196,6 +198,43 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2557123634250597542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2617419307599411769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b7f5e700735912459ca8fb3681c3ba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 0
+  provider: {fileID: 0}
+  priceText: {fileID: 5915718260923014064}
+  nameText: {fileID: 4871949909978644522}
+  iconImage: {fileID: 5025303678086165548}
+  priceFormat: '{0}'
+  bindOnAwake: 1
+  autoFindProviderIfNull: 1
+  OnPriceParsed:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &-1131195344507684972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2617419307599411769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 009b546b8079abe4a82d7d2b02e35ef0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buyButton: {fileID: 7316196990522444974}
+  spiceId: 0
 --- !u!1 &2628054750131912429
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,8 +589,6 @@ GameObject:
   - component: {fileID: 3023895322015083765}
   - component: {fileID: 333403623622028433}
   - component: {fileID: 7316196990522444974}
-  - component: {fileID: 4417747161799151001}
-  - component: {fileID: 545230796969984912}
   m_Layer: 0
   m_Name: buy_btn
   m_TagString: Untagged
@@ -697,53 +734,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 4417747161799151001}
-        m_TargetAssemblyTypeName: GoldBuyBtn, Assembly-CSharp
-        m_MethodName: OnClickBuy
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
---- !u!114 &4417747161799151001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5877917204637501796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7f2598a16129d741990626d03e5f935, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  price: 10
-  payType: 0
-  OnPurchased:
-    m_PersistentCalls:
-      m_Calls: []
-  OnInsufficient:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &545230796969984912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5877917204637501796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 331c17ef22d9ebf4fbcdad44f02c1ff9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  priceText: {fileID: 5915718260923014064}
-  priceTextName: Text.price.gold
-  bindOnAwake: 1
 --- !u!1 &7023178816957034499
 GameObject:
   m_ObjectHideFlags: 0
@@ -1117,7 +1107,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '10
+  m_text: '0
 
 '
   m_isRightToLeft: 0
