@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78148c3a362c1da4f9406fecefd9dc64, type: 3}
+  m_Name: KitchenCatalog
+  m_EditorClassIdentifier: 
+  items:
+  - toolId: toaster
+    displayName: "\uD1A0\uC2A4\uD130\uAE30"
+    priceGold: 70
+    icon: {fileID: -9094596152256402185, guid: 8654775db63078a4a9ec8eabfd99bafa, type: 3}
+    prefab: {fileID: 0}
+    footprint: {x: 2.4, y: 2.4}
+  - toolId: ice_maker
+    displayName: "\uC81C\uBE59\uAE30"
+    priceGold: 50
+    icon: {fileID: 4651650517160440260, guid: 8654775db63078a4a9ec8eabfd99bafa, type: 3}
+    prefab: {fileID: 0}
+    footprint: {x: 2.4, y: 2.4}
+  - toolId: shaker
+    displayName: "\uC170\uC774\uCEE4"
+    priceGold: 50
+    icon: {fileID: -8351332690245980998, guid: 8654775db63078a4a9ec8eabfd99bafa, type: 3}
+    prefab: {fileID: 0}
+    footprint: {x: 2.4, y: 2.4}
