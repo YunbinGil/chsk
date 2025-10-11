@@ -59,6 +59,7 @@ namespace Game.Kitchen
             if (_ghostSr && data.icon) _ghostSr.sprite = data.icon;
 
             _lastPos = startPos ?? ( _cam ? (Vector3)_cam.ScreenToWorldPoint(Input.mousePosition) : Vector3.zero );
+            _frozen = false;
             _lastPos.z = 0f;
             if (_ghost) _ghost.transform.position = _lastPos;
             _active = true;

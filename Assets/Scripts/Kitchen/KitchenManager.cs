@@ -22,7 +22,7 @@ namespace Game.Kitchen
         public GameObject instance;  // 씬에 설치된 오브젝트
     }
 
-    public class KitchenManager : MonoBehaviour, IShopCatalogProvider,  IShopPurchaseProvider
+    public class KitchenManager : MonoBehaviour, IShopCatalogProvider, IShopPurchaseProvider
     {
         public static KitchenManager Instance { get; private set; }
 
@@ -85,7 +85,7 @@ namespace Game.Kitchen
         public bool TryBuyTool(string toolId)
         {
             var data = GetData(toolId);
-            if (data==null) return false;
+            if (data == null) return false;
             if (_inventory.Count >= maxInventory) return false;
 
             var cm = CurrencyManager.Instance;
@@ -99,49 +99,49 @@ namespace Game.Kitchen
         }
 
         // ====== 인벤 터치 → 배치모드 시작 ======
-        
-public void BeginPlaceFromInventory(int slotId)
-{
-    var idx = _inventory.FindIndex(s => s.slotId == slotId);
-    if (idx < 0) return;
 
-    var tool = GetData(_inventory[idx].toolId);
-    if (tool == null) return;
-
-    // 사용할 프리팹 결정(특정 도구만 예외 프리팹이 있으면 그것, 아니면 제네릭)
-    var prefab = tool.prefabOverride ? tool.prefabOverride : defaultPlaceablePrefab;
-    if (prefab == null)
-    {
-        Debug.LogError("[Kitchen] defaultPlaceablePrefab 미지정 또는 prefabOverride 없음");
-        return;
-    }
-
-    placementController.BeginPreview(tool, blockMask, placedMask,
-        onConfirm: (pos) =>
+        public void BeginPlaceFromInventory(int slotId)
         {
-            // 설치 확정
-            var go = Instantiate(prefab, pos, Quaternion.identity);
+            var idx = _inventory.FindIndex(s => s.slotId == slotId);
+            if (idx < 0) return;
 
-            // 도구 데이터로 외형/콜라이더/ID 세팅
-            var placeable = go.GetComponent<PlaceableTool>();
-            if (placeable) placeable.Setup(tool);
+            var tool = GetData(_inventory[idx].toolId);
+            if (tool == null) return;
 
-            // 배치 레이어 지정(충돌 체크용)
-            SetLayerRecursively(go, LayerMaskToLayer(placedMask));
+            // 사용할 프리팹 결정(특정 도구만 예외 프리팹이 있으면 그것, 아니면 제네릭)
+            var prefab = tool.prefabOverride ? tool.prefabOverride : defaultPlaceablePrefab;
+            if (prefab == null)
+            {
+                Debug.LogError("[Kitchen] defaultPlaceablePrefab 미지정 또는 prefabOverride 없음");
+                return;
+            }
 
-            var placed = new PlacedInfo { placedId = _nextPlacedId++, toolId = tool.toolId, instance = go };
-            _placed.Add(placed);
-            OnPlaced?.Invoke(placed);
+            placementController.BeginPreview(tool, blockMask, placedMask,
+                onConfirm: (pos) =>
+                {
+                    // 설치 확정
+                    var go = Instantiate(prefab, pos, Quaternion.identity);
 
-            // 인벤에서 제거
-            _inventory.RemoveAt(idx);
-            OnInventoryRemoved?.Invoke(slotId);
-        },
-        onReturnHome: () =>
-        {
-            // "집" 버튼: 그냥 배치모드 종료 (인벤 유지)
-        });
-}
+                    // 도구 데이터로 외형/콜라이더/ID 세팅
+                    var placeable = go.GetComponent<PlaceableTool>();
+                    if (placeable) placeable.Setup(tool);
+
+                    // 배치 레이어 지정(충돌 체크용)
+                    SetLayerRecursively(go, LayerMaskToLayer(placedMask));
+
+                    var placed = new PlacedInfo { placedId = _nextPlacedId++, toolId = tool.toolId, instance = go };
+                    _placed.Add(placed);
+                    OnPlaced?.Invoke(placed);
+
+                    // 인벤에서 제거
+                    _inventory.RemoveAt(idx);
+                    OnInventoryRemoved?.Invoke(slotId);
+                },
+                onReturnHome: () =>
+                {
+                    // "집" 버튼: 그냥 배치모드 종료 (인벤 유지)
+                });
+        }
 
         // ====== 길게 눌러 이동/철거 모드 진입 ======
         public void BeginRelocate(GameObject targetInstance, string toolId)
@@ -195,13 +195,13 @@ public void BeginPlaceFromInventory(int slotId)
                 startPos: startPos
                 );
         }
-        
 
-// ====== IShopCatalogProvider ======
+
+        // ====== IShopCatalogProvider ======
         public bool TryGetPrice(string id, out int price)
         {
             var d = GetData(id);
-            price = d!=null ? d.priceGold : 0;
+            price = d != null ? d.priceGold : 0;
             return d != null;
         }
         public string GetDisplayName(string id) => GetData(id)?.displayName;
