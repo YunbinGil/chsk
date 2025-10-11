@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5982425914204975927}
   - component: {fileID: 8355906231973016933}
-  - component: {fileID: 3495924528928134970}
   - component: {fileID: 9097677475904070022}
   - component: {fileID: 7559213835740290319}
+  - component: {fileID: 2890805652538744245}
   m_Layer: 0
   m_Name: PlaceableTool
   m_TagString: Untagged
@@ -90,7 +90,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &3495924528928134970
+--- !u!114 &9097677475904070022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7752361857025283783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1d9e0e190b1e4946ab7106226fbc00d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toolId: shaker
+  holdSec: 0.5
+--- !u!114 &7559213835740290319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7752361857025283783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fabcdb13af9da24ea6a37f3e6aea506, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sr: {fileID: 8355906231973016933}
+  col: {fileID: 0}
+--- !u!61 &2890805652538744245
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,7 +148,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -134,33 +162,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.59375, y: 0.78125}
   m_EdgeRadius: 0
---- !u!114 &9097677475904070022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7752361857025283783}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1d9e0e190b1e4946ab7106226fbc00d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toolId: shaker
-  holdSec: 0.5
---- !u!114 &7559213835740290319
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7752361857025283783}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fabcdb13af9da24ea6a37f3e6aea506, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sr: {fileID: 8355906231973016933}
-  col: {fileID: 3495924528928134970}

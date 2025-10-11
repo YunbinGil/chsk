@@ -155,7 +155,7 @@ namespace Game.Kitchen
 
             var renderers = targetInstance.GetComponentsInChildren<Renderer>(true);
             foreach (var r in renderers) r.enabled = false;
-            var colliders = targetInstance.GetComponentsInChildren<Collider2D>(true);
+            var colliders = targetInstance.GetComponentsInChildren<BoxCollider2D>(true);
             foreach (var c in colliders) c.enabled = false;
 
 
