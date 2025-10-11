@@ -153,10 +153,20 @@ public void BeginPlaceFromInventory(int slotId)
             var tool = GetData(toolId);
             if (tool == null) return;
 
+            var renderers = targetInstance.GetComponentsInChildren<Renderer>(true);
+            foreach (var r in renderers) r.enabled = false;
+            var colliders = targetInstance.GetComponentsInChildren<Collider2D>(true);
+            foreach (var c in colliders) c.enabled = false;
+
+
+            var startPos = targetInstance.transform.position;
+
             placementController.BeginPreview(tool, blockMask, placedMask,
                 onConfirm: (pos) =>
                 {
-                    targetInstance.transform.position = pos; // 위치만 갱신
+                    targetInstance.transform.position = pos;
+                    foreach (var r in renderers) r.enabled = true;
+                    foreach (var c in colliders) c.enabled = true;
                 },
                 onReturnHome: () =>
                 {
@@ -177,7 +187,13 @@ public void BeginPlaceFromInventory(int slotId)
                     {
                         Debug.LogWarning("[Kitchen] 인벤토리 가득차서 회수 실패(소멸).");
                     }
-                });
+                }, onCancel: () =>
+                {
+                    foreach (var r in renderers) r.enabled = true;
+                    foreach (var c in colliders) c.enabled = true;
+                },
+                startPos: startPos
+                );
         }
         
 

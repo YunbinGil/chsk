@@ -32,7 +32,8 @@ namespace Game.Kitchen
         Vector3 _lastPos;
         bool _frozen;    // 프리뷰 이동 잠금
         Vector3 _frozenPos;        // 버튼/고스트 고정 위치
-
+        
+        Action _onCancel;
         void Awake() { _cam = Camera.main; }
 
         public void BeginPreview(
@@ -40,7 +41,9 @@ namespace Game.Kitchen
             LayerMask blockMask,
             LayerMask placedMask,
             Action<Vector3> onConfirm,
-            Action onReturnHome)
+            Action onReturnHome,
+            Action onCancel = null,
+            Vector3? startPos = null)
         {
             EndPreview(); // 안전 초기화
 
@@ -49,11 +52,15 @@ namespace Game.Kitchen
             _placedMask = placedMask;
             _onConfirm = onConfirm;
             _onReturnHome = onReturnHome;
+            _onCancel    = onCancel;
 
             _ghost = Instantiate(ghostPrefab);
             _ghostSr = _ghost.GetComponentInChildren<SpriteRenderer>();
             if (_ghostSr && data.icon) _ghostSr.sprite = data.icon;
 
+            _lastPos = startPos ?? ( _cam ? (Vector3)_cam.ScreenToWorldPoint(Input.mousePosition) : Vector3.zero );
+            _lastPos.z = 0f;
+            if (_ghost) _ghost.transform.position = _lastPos;
             _active = true;
         }
 
@@ -102,24 +109,31 @@ namespace Game.Kitchen
 
             _frozen = true;
             _frozenPos = _lastPos;
+
             if (_ghost) _ghost.transform.position = _frozenPos;
 
             _buttonsRow = Instantiate(buttonsRowPrefab);
 
             var binder = _buttonsRow.GetComponentInChildren<ButtonsRowBinder>(true);
             var canvas = binder ? binder.canvas : _buttonsRow.GetComponentInParent<Canvas>();
+            var content = _buttonsRow.transform.Find("Content") as RectTransform;
 
-            // Overlay/Screen Space 캔버스: 화면 좌표로 변환해서 배치
-            var screen = _cam.WorldToScreenPoint(_frozenPos + buttonsOffset);
-            var rt = _buttonsRow.GetComponent<RectTransform>();
-            if (rt) rt.position = screen;   // 스크린 좌표
-            else _buttonsRow.transform.position = screen; // 안전망
+            if (canvas && canvas.renderMode == RenderMode.ScreenSpaceOverlay)
+            {
+                // Overlay → 스크린 포인트 → 로컬 포인트 변환 후 Content에 대입
+                Vector2 screen = _cam.WorldToScreenPoint(_frozenPos + buttonsOffset);
+                RectTransform canvasRt = canvas.GetComponent<RectTransform>();
+
+                Vector2 local;
+                RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRt, screen, null, out local);
+                content.anchoredPosition = local;         // ★ 핵심
+            }
 
             // 자식 버튼: OK, CANCEL, HOME 순서라고 가정
-           var ok     = binder ? binder.okBtn : null;
+            var ok     = binder ? binder.okBtn : null;
             var cancel = binder ? binder.cancelBtn : null;
             var home = binder ? binder.homeBtn : null;
-            
+
             ok.onClick.AddListener(() =>
             {
                 if (_isOk)
@@ -131,8 +145,9 @@ namespace Game.Kitchen
             cancel.onClick.AddListener(() =>
             {
                 // X: 버튼 닫고 계속 프리뷰 상태 유지
-                if (_buttonsRow) { Destroy(_buttonsRow); _buttonsRow = null;
-                    _frozen = false; }
+                if (_buttonsRow) { Destroy(_buttonsRow); _buttonsRow = null; }
+                    _frozen = false;
+                    _onCancel?.Invoke(); 
             });
             home.onClick.AddListener(() =>
             {

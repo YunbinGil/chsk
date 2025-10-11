@@ -18,4 +18,6 @@ public class KitchenItemData
     public Sprite icon;            // 인벤/미리보기 아이콘
     public Vector2 footprint = new Vector2(2.4f, 2.4f); // 충돌 확인용 크기(월드 단위). 픽셀/PPU에 맞춰 조정
     public GameObject prefabOverride; // 특정 녀석만 고유 프리팹 쓰고 싶을 때만 채움
+    public enum FootprintMode { FromData, FromSpriteBounds }
+    public FootprintMode footprintMode = FootprintMode.FromSpriteBounds;
 }
