@@ -167,9 +167,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6168039638421091259}
   - component: {fileID: 2557123634250597542}
-  - component: {fileID: 1296993149132357555}
+  - component: {fileID: 6086986350962894047}
   m_Layer: 0
-  m_Name: ShopCell
+  m_Name: ShopCell-tool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 0
-  providerType: 1
+  providerType: 2
   providerOverride: {fileID: 0}
   priceText: {fileID: 5915718260923014064}
   nameText: {fileID: 4871949909978644522}
@@ -221,7 +221,7 @@ MonoBehaviour:
   OnPriceParsed:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1296993149132357555
+--- !u!114 &6086986350962894047
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -235,7 +235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buyButton: {fileID: 7316196990522444974}
   binder: {fileID: 2557123634250597542}
-  providerType: 1
+  providerType: 2
   purchaseOverride: {fileID: 0}
 --- !u!1 &2628054750131912429
 GameObject:

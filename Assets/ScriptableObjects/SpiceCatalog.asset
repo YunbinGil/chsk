@@ -12,12 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: SpiceCatalog
   m_EditorClassIdentifier: Assembly-CSharp::SpiceCatalog
-  items:
-  - spiceId: cherry
-    displayName: "\uCCB4\uB9AC"
-    priceGold: 10
-    icon: {fileID: -2413327356150862669, guid: 8654775db63078a4a9ec8eabfd99bafa, type: 3}
-  - spiceId: strawberry
-    displayName: "\uB538\uAE30"
-    priceGold: 10
-    icon: {fileID: 6361413248432730260, guid: 8654775db63078a4a9ec8eabfd99bafa, type: 3}
+  items: []

@@ -14,7 +14,7 @@ public class CabinetSlot
 }
 
 // === 매니저 ===
-public class SpiceManager : MonoBehaviour, IShopCatalogProvider
+public class SpiceManager : MonoBehaviour, IShopCatalogProvider, IShopPurchaseProvider
 {
     public static SpiceManager Instance { get; private set; }
 
@@ -57,19 +57,20 @@ public class SpiceManager : MonoBehaviour, IShopCatalogProvider
     public int GetMaxSlots() => maxSlots;
 
     // 규칙 1/2/3을 모두 만족하는 구매 로직
+    /// 1. 캐비넷에 없음 -> 이미지 prefab생성 
+    /// 2. 캐비넷에 있음, 10개 안참 -> 보유개수 데이터 수정, ui 바인딩 
+    /// 3. 캐비넷에 잇는데 10개 다참 -> 새로 이미지 prefab 생성 해야됨
     public bool TryBuy(SpiceData data, int amount = 1)
     {
         if (data == null || amount <= 0) return false;
 
-        // 결제 (네 CurrencyManager 규격에 맞춰 한 줄만 수정하면 됨)
+        // 결제
         int totalCost = data.priceGold * amount; 
         var cm = CurrencyManager.Instance; // Game.Managers.CurrencyManager // null도 가능
-        if (cm != null)
-        {
-            if (!cm.TrySpend(CurrencyType.Gold, totalCost))
+        if (cm != null&& !cm.TrySpend(CurrencyType.Gold, totalCost))
                 return false;
-        }
-        // cm가 없으면(초기 세팅 전 등) 일단 구매 진행하도록 통과
+        
+        
 
         for (int k = 0; k < amount; k++)
         {
@@ -111,10 +112,8 @@ public class SpiceManager : MonoBehaviour, IShopCatalogProvider
 
         if (slot.count <= 0)
         {
-            // 리스트에서 제거
-            _slots.RemoveAt(idx);
-            // UI 쪽에 프리팹 파괴 지시
-            OnSlotRemoved?.Invoke(slotId);
+            _slots.RemoveAt(idx); // 리스트에서 제거
+            OnSlotRemoved?.Invoke(slotId); // UI 쪽에 프리팹 파괴 지시
         }
         else
         {
@@ -131,13 +130,16 @@ public class SpiceManager : MonoBehaviour, IShopCatalogProvider
         return d != null;
     }
 
-    public string GetDisplayName(string itemId)
-    {
-        return GetData(itemId)?.displayName;
-    }
+    public string GetDisplayName(string itemId) => GetData(itemId)?.displayName;
 
-    public Sprite GetIcon(string itemId)
+    public Sprite GetIcon(string itemId) => GetData(itemId)?.icon;
+    
+    // ====== IShopPurchaseProvider ======
+    // 상점 공용 호출에 맞추기: itemId만 받음
+    public bool TryBuy(string id)
     {
-        return GetData(itemId)?.icon;
+        var d = GetData(id);
+        if (d == null) return false;
+        return TryBuy(d, 1);
     }
 }

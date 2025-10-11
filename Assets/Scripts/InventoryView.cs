@@ -14,30 +14,51 @@ namespace Game.Kitchen
 
         void OnEnable()
         {
-            Redraw();
+            StartCoroutine(Init());
+        }
+
+        IEnumerator Init()
+        {
+            // 필수 레퍼런스 검사
+            if (!slotsParent) { Debug.LogError("[InventoryView] slotsParent 미지정"); yield break; }
+            if (!slotPrefab)  { Debug.LogError("[InventoryView] slotPrefab 미지정");  yield break; }
+
+            // KitchenManager 준비 대기
+            while (KitchenManager.Instance == null) yield return null;
+
             var km = KitchenManager.Instance;
-            km.OnInventoryAdded += _ => Redraw();
-            km.OnInventoryRemoved += _ => Redraw();
+            // 이벤트 구독은 한 번만
+            km.OnInventoryAdded += _ => RedrawSafe();
+            km.OnInventoryRemoved += _ => RedrawSafe();
+
+            RedrawSafe();
         }
 
         void OnDisable()
         {
             var km = KitchenManager.Instance;
-            if (!km) return;
-            km.OnInventoryAdded -= _ => Redraw();
-            km.OnInventoryRemoved -= _ => Redraw();
+            if (km != null)
+            {
+                km.OnInventoryAdded -= _ => RedrawSafe();
+                km.OnInventoryRemoved -= _ => RedrawSafe();
+            }
         }
 
-        void Redraw()
+        void RedrawSafe()
         {
+            var km = KitchenManager.Instance;
+            if (km == null || slotsParent == null || slotPrefab == null) return;
+
             foreach (Transform c in slotsParent) Destroy(c.gameObject);
 
-            var km = KitchenManager.Instance;
             foreach (var s in km.GetInventory())
             {
                 var data = km.GetData(s.toolId);
+                if (data == null) continue;
+
                 var go = Instantiate(slotPrefab, slotsParent);
                 go.name = $"InvSlot_{s.slotId}";
+
                 var btn = go.GetComponentInChildren<Button>();
                 var img = go.GetComponentInChildren<Image>();
                 var txt = go.GetComponentInChildren<TMP_Text>();
@@ -45,11 +66,20 @@ namespace Game.Kitchen
                 if (img && data.icon) img.sprite = data.icon;
                 if (txt) txt.text = data.displayName;
 
-                btn.onClick.AddListener(() =>
+                if (btn)
                 {
-                    toast?.Show($"{data.displayName}", 2f);
-                    km.BeginPlaceFromInventory(s.slotId);
-                });
+                    int capturedId = s.slotId; // 클로저 캡처
+                    btn.onClick.RemoveAllListeners();
+                    btn.onClick.AddListener(() =>
+                    {
+                        toast?.Show($"{data.displayName}", 2f);
+                        km.BeginPlaceFromInventory(capturedId);
+                    });
+                }
+                else
+                {
+                    Debug.LogWarning("[InventoryView] slotPrefab에 Button이 없음");
+                }
             }
         }
     }

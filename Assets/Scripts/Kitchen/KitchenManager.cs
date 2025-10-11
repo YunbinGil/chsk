@@ -22,7 +22,7 @@ namespace Game.Kitchen
         public GameObject instance;  // 씬에 설치된 오브젝트
     }
 
-    public class KitchenManager : MonoBehaviour
+    public class KitchenManager : MonoBehaviour, IShopCatalogProvider,  IShopPurchaseProvider
     {
         public static KitchenManager Instance { get; private set; }
 
@@ -45,6 +45,7 @@ namespace Game.Kitchen
         [SerializeField] private GameObject defaultPlaceablePrefab; // = PlaceableTool.prefab
 
         // 배치 금지 구역/이미 설치물 레이어 마스크
+        [Header("Masks")]
         [SerializeField] private LayerMask blockMask;   // (핑크벽, 인벤 하단 등)
         [SerializeField] private LayerMask placedMask;  // 이미 설치된 도구들
 
@@ -59,6 +60,8 @@ namespace Game.Kitchen
             if (Instance != null && Instance != this) { Destroy(gameObject); return; }
             Instance = this;
             DontDestroyOnLoad(gameObject);
+
+            Debug.Log($"[KitchenManager] awake on {gameObject.name} (scene={gameObject.scene.name})", gameObject);
         }
 
         public KitchenItemData GetData(string toolId) => catalog?.Get(toolId);
@@ -79,7 +82,7 @@ namespace Game.Kitchen
         public int GetInventoryCount() => _inventory.Count;
 
         // ====== 구매 → 인벤토리 추가 (스택 없음) ======
-        public bool TryBuy(string toolId)
+        public bool TryBuyTool(string toolId)
         {
             var data = GetData(toolId);
             if (data==null) return false;
@@ -148,7 +151,7 @@ public void BeginPlaceFromInventory(int slotId)
             if (idx < 0) return;
 
             var tool = GetData(toolId);
-            if (tool==null) return;
+            if (tool == null) return;
 
             placementController.BeginPreview(tool, blockMask, placedMask,
                 onConfirm: (pos) =>
@@ -176,12 +179,28 @@ public void BeginPlaceFromInventory(int slotId)
                     }
                 });
         }
+        
 
+// ====== IShopCatalogProvider ======
+        public bool TryGetPrice(string id, out int price)
+        {
+            var d = GetData(id);
+            price = d!=null ? d.priceGold : 0;
+            return d != null;
+        }
+        public string GetDisplayName(string id) => GetData(id)?.displayName;
+        public Sprite GetIcon(string id) => GetData(id)?.icon;
+
+        // ====== IShopPurchaseProvider ======
+        // 인터페이스 표준 메서드 이름은 TryBuy(string)
+        public bool TryBuy(string id) => TryBuyTool(id);
+
+        // ====== 유틸 ======
         static int LayerMaskToLayer(LayerMask mask)
         {
             int layerNumber = 0;
             int maskValue = mask.value;
-            while (maskValue > 1) { maskValue = maskValue >> 1; layerNumber++; }
+            while (maskValue > 1) { maskValue >>= 1; layerNumber++; }
             return layerNumber;
         }
 
