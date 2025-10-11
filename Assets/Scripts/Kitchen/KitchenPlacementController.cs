@@ -144,7 +144,9 @@ namespace Game.Kitchen
                 }
                 else
                 {
-                   _frozen = false; 
+                    _frozen = false;
+                    if (_buttonsRow) Destroy(_buttonsRow);
+                    
                 }
             });
             cancel.onClick.AddListener(() =>
