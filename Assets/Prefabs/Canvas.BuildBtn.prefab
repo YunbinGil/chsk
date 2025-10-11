@@ -77,6 +77,7 @@ GameObject:
   - component: {fileID: 2844706733340776050}
   - component: {fileID: 957627780915815790}
   - component: {fileID: 7560299925260471312}
+  - component: {fileID: -49341455675101028}
   m_Layer: 5
   m_Name: Canvas.BuildBtn
   m_TagString: Untagged
@@ -167,6 +168,22 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &-49341455675101028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820368929413073046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd3fe253ff3e88c4a9e90a04b7582e91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 2844706733340776050}
+  okBtn: {fileID: 7320396759715486597}
+  cancelBtn: {fileID: 4658834960865917819}
+  homeBtn: {fileID: 361611106724052279}
 --- !u!1 &2810979429890632120
 GameObject:
   m_ObjectHideFlags: 0

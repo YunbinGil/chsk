@@ -30,6 +30,8 @@ namespace Game.Kitchen
         bool _active;
         bool _isOk;
         Vector3 _lastPos;
+        bool _frozen;    // 프리뷰 이동 잠금
+        Vector3 _frozenPos;        // 버튼/고스트 고정 위치
 
         void Awake() { _cam = Camera.main; }
 
@@ -70,10 +72,13 @@ namespace Game.Kitchen
             if (!_active || _current == null) return;
 
             // 마우스 위치에 고스트 따라가기
-            Vector3 m = Input.mousePosition;
-            if (_cam) _lastPos = _cam.ScreenToWorldPoint(new Vector3(m.x, m.y, Mathf.Abs(_cam.transform.position.z)));
-            _lastPos.z = 0f;
-            if (_ghost) _ghost.transform.position = _lastPos;
+            if (!_frozen)
+            {
+                Vector3 m = Input.mousePosition;
+                if (_cam) _lastPos = _cam.ScreenToWorldPoint(new Vector3(m.x, m.y, Mathf.Abs(_cam.transform.position.z)));
+                _lastPos.z = 0f;
+                if (_ghost) _ghost.transform.position = _lastPos;
+            }
 
             // 충돌 체크
             _isOk = CheckPlaceable(_lastPos, _current.footprint, _blockMask, _placedMask);
@@ -90,28 +95,44 @@ namespace Game.Kitchen
 
         void ToggleButtons()
         {
-            if (_buttonsRow) { Destroy(_buttonsRow); _buttonsRow = null; return; }
+            if (_buttonsRow) {
+                Destroy(_buttonsRow); _buttonsRow = null;
+                _frozen = false; 
+                return; }
+
+            _frozen = true;
+            _frozenPos = _lastPos;
+            if (_ghost) _ghost.transform.position = _frozenPos;
 
             _buttonsRow = Instantiate(buttonsRowPrefab);
-            _buttonsRow.transform.position = _lastPos + buttonsOffset;
+
+            var binder = _buttonsRow.GetComponentInChildren<ButtonsRowBinder>(true);
+            var canvas = binder ? binder.canvas : _buttonsRow.GetComponentInParent<Canvas>();
+
+            // Overlay/Screen Space 캔버스: 화면 좌표로 변환해서 배치
+            var screen = _cam.WorldToScreenPoint(_frozenPos + buttonsOffset);
+            var rt = _buttonsRow.GetComponent<RectTransform>();
+            if (rt) rt.position = screen;   // 스크린 좌표
+            else _buttonsRow.transform.position = screen; // 안전망
 
             // 자식 버튼: OK, CANCEL, HOME 순서라고 가정
-            var ok    = _buttonsRow.transform.GetChild(0).GetComponent<UnityEngine.UI.Button>();
-            var cancel= _buttonsRow.transform.GetChild(1).GetComponent<UnityEngine.UI.Button>();
-            var home  = _buttonsRow.transform.GetChild(2).GetComponent<UnityEngine.UI.Button>();
-
+           var ok     = binder ? binder.okBtn : null;
+            var cancel = binder ? binder.cancelBtn : null;
+            var home = binder ? binder.homeBtn : null;
+            
             ok.onClick.AddListener(() =>
             {
                 if (_isOk)
                 {
-                    _onConfirm?.Invoke(_lastPos);
+                    _onConfirm?.Invoke(_frozenPos);
                     EndPreview();
                 }
             });
             cancel.onClick.AddListener(() =>
             {
                 // X: 버튼 닫고 계속 프리뷰 상태 유지
-                if (_buttonsRow) { Destroy(_buttonsRow); _buttonsRow = null; }
+                if (_buttonsRow) { Destroy(_buttonsRow); _buttonsRow = null;
+                    _frozen = false; }
             });
             home.onClick.AddListener(() =>
             {
