@@ -142,13 +142,18 @@ namespace Game.Kitchen
                     _onConfirm?.Invoke(_frozenPos);
                     EndPreview();
                 }
+                else
+                {
+                   _frozen = false; 
+                }
             });
             cancel.onClick.AddListener(() =>
             {
                 // X: 버튼 닫고 계속 프리뷰 상태 유지
                 if (_buttonsRow) { Destroy(_buttonsRow); _buttonsRow = null; }
-                    _frozen = false;
-                    _onCancel?.Invoke(); 
+                _frozen = true;
+                _onCancel?.Invoke();
+                EndPreview();
             });
             home.onClick.AddListener(() =>
             {

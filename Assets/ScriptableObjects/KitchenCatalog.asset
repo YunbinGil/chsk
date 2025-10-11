@@ -15,6 +15,7 @@ MonoBehaviour:
   items:
   - toolId: toaster
     displayName: "\uD1A0\uC2A4\uD130\uAE30"
+    interaction: 1
     priceGold: 70
     icon: {fileID: -9094596152256402185, guid: 8654775db63078a4a9ec8eabfd99bafa, type: 3}
     footprint: {x: 1, y: 1}
@@ -22,6 +23,7 @@ MonoBehaviour:
     footprintMode: 1
   - toolId: ice_maker
     displayName: "\uC81C\uBE59\uAE30"
+    interaction: 1
     priceGold: 50
     icon: {fileID: 4651650517160440260, guid: 8654775db63078a4a9ec8eabfd99bafa, type: 3}
     footprint: {x: 1, y: 1}
@@ -29,6 +31,7 @@ MonoBehaviour:
     footprintMode: 1
   - toolId: shaker
     displayName: "\uC170\uC774\uCEE4"
+    interaction: 1
     priceGold: 50
     icon: {fileID: -8351332690245980998, guid: 8654775db63078a4a9ec8eabfd99bafa, type: 3}
     footprint: {x: 1, y: 1}
