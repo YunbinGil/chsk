@@ -23,6 +23,7 @@ namespace Game.Kitchen
 
         KitchenItemData _current;
         LayerMask _blockMask, _placedMask;
+        BoxCollider2D _ghostCol;
 
         Action<Vector3> _onConfirm;
         Action _onReturnHome;
@@ -32,7 +33,7 @@ namespace Game.Kitchen
         Vector3 _lastPos;
         bool _frozen;    // 프리뷰 이동 잠금
         Vector3 _frozenPos;        // 버튼/고스트 고정 위치
-        
+
         Action _onCancel;
         void Awake() { _cam = Camera.main; }
 
@@ -58,6 +59,16 @@ namespace Game.Kitchen
             _ghostSr = _ghost.GetComponentInChildren<SpriteRenderer>();
             if (_ghostSr && data.icon) _ghostSr.sprite = data.icon;
 
+            // 고스트 콜라이더 동기화(PlaceableTool과 동일 규칙)
+            _ghostCol = _ghost.GetComponent<BoxCollider2D>();
+            if (_ghostCol == null) _ghostCol = _ghost.AddComponent<BoxCollider2D>();
+            if (_ghostSr && _ghostSr.sprite)
+            {
+                var b = _ghostSr.sprite.bounds;   // 로컬 단위
+                _ghostCol.size = b.size;
+                _ghostCol.offset = b.center;
+                _ghostCol.isTrigger = true;       // 프리뷰라면 트리거 권장
+            }
             _lastPos = startPos ?? ( _cam ? (Vector3)_cam.ScreenToWorldPoint(Input.mousePosition) : Vector3.zero );
             _frozen = false;
             _lastPos.z = 0f;
@@ -89,7 +100,7 @@ namespace Game.Kitchen
             }
 
             // 충돌 체크
-            _isOk = CheckPlaceable(_lastPos, _current.footprint, _blockMask, _placedMask);
+            _isOk = CheckPlaceable(_blockMask, _placedMask);
             if (_ghostSr) _ghostSr.color = _isOk ? okColor : badColor;
 
             // 좌클릭: 버튼 토글
@@ -166,15 +177,21 @@ namespace Game.Kitchen
         }
 
         // 오버랩 박스 충돌 검사
-        bool CheckPlaceable(Vector3 center, Vector2 size, LayerMask block, LayerMask placed)
+        bool CheckPlaceable(LayerMask block, LayerMask placed)
         {
+            if (_ghostCol == null)
+                return true;
+            
+            var bb = _ghostCol.bounds;              // ★ 실제 콜라이더의 '월드' 경계
+            var center = (Vector2)bb.center;
+            var size = (Vector2)bb.size * 0.999f; // 부동소수 떨림 방지용 아주 미세한 축소
+
+
             // 금지구역
-            var hit1 = Physics2D.OverlapBoxAll(center, size, 0f, block);
-            if (hit1 != null && hit1.Length > 0) return false;
+            if (Physics2D.OverlapBox(center, size, 0f, block))  return false;
 
             // 기존 설치물
-            var hit2 = Physics2D.OverlapBoxAll(center, size, 0f, placed);
-            if (hit2 != null && hit2.Length > 0) return false;
+            if (Physics2D.OverlapBox(center, size, 0f, placed)) return false;
 
             return true;
         }
@@ -184,6 +201,7 @@ namespace Game.Kitchen
         {
             if (_active && _current != null)
             {
+                var bb = _ghostCol.bounds;
                 Gizmos.color = _isOk ? Color.green : Color.red;
                 Gizmos.DrawWireCube(_lastPos, _current.footprint);
             }

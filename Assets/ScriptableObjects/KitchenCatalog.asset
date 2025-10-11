@@ -20,7 +20,7 @@ MonoBehaviour:
     icon: {fileID: -9094596152256402185, guid: 8654775db63078a4a9ec8eabfd99bafa, type: 3}
     footprint: {x: 1, y: 1}
     prefabOverride: {fileID: 0}
-    footprintMode: 0
+    footprintMode: 1
   - toolId: ice_maker
     displayName: "\uC81C\uBE59\uAE30"
     interaction: 1
@@ -28,7 +28,7 @@ MonoBehaviour:
     icon: {fileID: 4651650517160440260, guid: 8654775db63078a4a9ec8eabfd99bafa, type: 3}
     footprint: {x: 1, y: 1}
     prefabOverride: {fileID: 0}
-    footprintMode: 0
+    footprintMode: 1
   - toolId: shaker
     displayName: "\uC170\uC774\uCEE4"
     interaction: 1
@@ -36,4 +36,4 @@ MonoBehaviour:
     icon: {fileID: -8351332690245980998, guid: 8654775db63078a4a9ec8eabfd99bafa, type: 3}
     footprint: {x: 1, y: 1}
     prefabOverride: {fileID: 0}
-    footprintMode: 0
+    footprintMode: 1
