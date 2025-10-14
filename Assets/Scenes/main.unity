@@ -10537,6 +10537,9 @@ MonoBehaviour:
   maxInventory: 7
   placementController: {fileID: 1922089915}
   defaultPlaceablePrefab: {fileID: 7752361857025283783, guid: 3010389f1469f5147912795641adc0d8, type: 3}
+  bubblePanel: {fileID: 1986952532}
+  bubbleBtnPrefab_gold: {fileID: 5037528140972079133, guid: b35e9c8ecfb41f84a9af12907b089160, type: 3}
+  bubbleBtnPrefab_ice: {fileID: 7118212163617041234, guid: 880e4818db08b774f94dd5fdad319600, type: 3}
   blockMask:
     serializedVersion: 2
     m_Bits: 1024
@@ -13017,7 +13020,7 @@ GameObject:
   - component: {fileID: 1986952534}
   - component: {fileID: 1986952533}
   m_Layer: 5
-  m_Name: Panel.Generator
+  m_Name: Panel.Bubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

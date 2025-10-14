@@ -6,7 +6,7 @@ namespace Game.Kitchen
 {
     public class LongPressRelocate : MonoBehaviour
     {
-        [SerializeField] private string toolId;
+        [SerializeField] public string toolId;
         [SerializeField] private float holdSec = 0.5f;
 
         float _downT;
@@ -24,7 +24,7 @@ namespace Game.Kitchen
             }
         }
 
-        // 설치 프리팹 루트에 붙이고, 해당 프리팹의 toolId 셋업해줘
+        // 설치 프리팹 루트에 붙이고, 해당 프리팹의 toolId 셋업
         public void SetToolId(string id) => toolId = id;
     }
 }

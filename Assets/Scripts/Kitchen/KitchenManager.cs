@@ -44,6 +44,10 @@ namespace Game.Kitchen
         [SerializeField] private KitchenPlacementController placementController;
         [SerializeField] private GameObject defaultPlaceablePrefab; // = PlaceableTool.prefab
 
+        [Header("Bubble Prefab)")]
+        [SerializeField] private RectTransform bubblePanel;
+         [SerializeField] private GameObject bubbleBtnPrefab_gold;
+         [SerializeField] private GameObject bubbleBtnPrefab_ice;
         // 배치 금지 구역/이미 설치물 레이어 마스크
         [Header("Masks")]
         [SerializeField] private LayerMask blockMask;   // (핑크벽, 인벤 하단 등)
@@ -121,6 +125,14 @@ namespace Game.Kitchen
                 {
                     // 설치 확정
                     var go = Instantiate(prefab, pos, Quaternion.identity);
+                    var placedTool = go.GetComponent<PlaceableTool>();
+                    if (placedTool)
+                    {
+                        var toolId = placedTool.GetComponent<LongPressRelocate>().toolId;
+                        var bubblePrefab = toolId == "ice_maker" ? bubbleBtnPrefab_ice : bubbleBtnPrefab_gold;
+                        placedTool.Init(bubblePanel, bubblePrefab, Camera.main);
+                    }
+                    go.layer = LayerMask.NameToLayer("UI");
 
                     // 도구 데이터로 외형/콜라이더/ID 세팅
                     var placeable = go.GetComponent<PlaceableTool>();
