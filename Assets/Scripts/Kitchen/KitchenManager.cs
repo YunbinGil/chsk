@@ -46,8 +46,8 @@ namespace Game.Kitchen
 
         [Header("Bubble Prefab)")]
         [SerializeField] private RectTransform bubblePanel;
-         [SerializeField] private GameObject bubbleBtnPrefab_shaker;
-         [SerializeField] private GameObject bubbleBtnPrefab_ice;
+        [SerializeField] private GameObject bubbleBtnPrefab_shaker;
+        [SerializeField] private GameObject bubbleBtnPrefab_ice;
         // 배치 금지 구역/이미 설치물 레이어 마스크
         [Header("Masks")]
         [SerializeField] private LayerMask blockMask;   // (핑크벽, 인벤 하단 등)
@@ -139,15 +139,12 @@ namespace Game.Kitchen
                     var placedTool = go.GetComponent<PlaceableTool>();
                     if (placedTool)
                     {
-                        var toolId = placedTool.GetComponent<LongPressRelocate>().toolId;
-                        var bubblePrefab = GetBubblePrefab(toolId);
+                        var bubblePrefab = GetBubblePrefab(tool.toolId);
                         placedTool.Init(bubblePanel, bubblePrefab, Camera.main);
+                        placedTool.Setup(tool);
+                        placedTool.SetBubbleActive(true);
                     }
                     go.layer = LayerMask.NameToLayer("UI");
-
-                    // 도구 데이터로 외형/콜라이더/ID 세팅
-                    var placeable = go.GetComponent<PlaceableTool>();
-                    if (placeable) placeable.Setup(tool);
 
                     // 배치 레이어 지정(충돌 체크용)
                     SetLayerRecursively(go, LayerMaskToLayer(placedMask));
