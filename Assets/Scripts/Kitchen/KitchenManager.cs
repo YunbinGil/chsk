@@ -162,6 +162,10 @@ namespace Game.Kitchen
             var idx = _placed.FindIndex(p => p.instance == targetInstance);
             if (idx < 0) return;
 
+            //bubble 
+            var pt = _placed[idx].instance.GetComponent<PlaceableTool>();
+            if(pt) pt.SetBubbleActive(false);
+
             var tool = GetData(toolId);
             if (tool == null) return;
 
@@ -179,6 +183,8 @@ namespace Game.Kitchen
                     targetInstance.transform.position = pos;
                     foreach (var r in renderers) r.enabled = true;
                     foreach (var c in colliders) c.enabled = true;
+
+                    if (pt) pt.SetBubbleActive(true);
                 },
                 onReturnHome: () =>
                 {
@@ -203,6 +209,8 @@ namespace Game.Kitchen
                 {
                     foreach (var r in renderers) r.enabled = true;
                     foreach (var c in colliders) c.enabled = true;
+
+                    if (pt) pt.SetBubbleActive(true);
                 },
                 startPos: startPos
                 );

@@ -29,6 +29,7 @@ public class PlaceableTool : MonoBehaviour
         var go = Instantiate(bubblePrefab, bubblePanel, false);
         bubbleRt = go.GetComponent<RectTransform>();
 
+        SetBubbleActive(true);      
         UpdateBubblePosition(+100f);
     }
 
@@ -74,9 +75,10 @@ public class PlaceableTool : MonoBehaviour
         col.size = new Vector2(b.size.x, b.size.y);
         col.offset = new Vector2(b.center.x, b.center.y);
     }
-     void OnDestroy()
+    void OnDestroy()   { if (bubbleRt) Destroy(bubbleRt.gameObject); }
+    public void SetBubbleActive(bool on)
     {
-        if (bubbleRt) Destroy(bubbleRt.gameObject);
+        if (bubbleRt) bubbleRt.gameObject.SetActive(on);
     }
 #if UNITY_EDITOR
     void OnValidate()
