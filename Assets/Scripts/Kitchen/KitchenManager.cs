@@ -77,7 +77,7 @@ namespace Game.Kitchen
         }
 
         GameObject GetBubblePrefab(string toolId)
-        => _bubbleMap.TryGetValue(toolId, out var prefab) ? prefab : bubbleBtnPrefab_gold;
+        => _bubbleMap.TryGetValue(toolId, out var prefab) ? prefab : bubbleBtnPrefab_shaker;
 
         public KitchenItemData GetData(string toolId) => catalog?.Get(toolId);
 
@@ -140,9 +140,7 @@ namespace Game.Kitchen
                     if (placedTool)
                     {
                         var toolId = placedTool.GetComponent<LongPressRelocate>().toolId;
-                        var bubblePrefab = GetBubblePrefab(toolId)
-                        ? prefab
-                        : bubbleBtnPrefab_shaker; //일단 기본은 골드 얻는 shaker로
+                        var bubblePrefab = GetBubblePrefab(toolId);
                         placedTool.Init(bubblePanel, bubblePrefab, Camera.main);
                     }
                     go.layer = LayerMask.NameToLayer("UI");
