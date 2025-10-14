@@ -46,7 +46,7 @@ namespace Game.Kitchen
 
         [Header("Bubble Prefab)")]
         [SerializeField] private RectTransform bubblePanel;
-         [SerializeField] private GameObject bubbleBtnPrefab_gold;
+         [SerializeField] private GameObject bubbleBtnPrefab_shaker;
          [SerializeField] private GameObject bubbleBtnPrefab_ice;
         // 배치 금지 구역/이미 설치물 레이어 마스크
         [Header("Masks")]
@@ -59,14 +59,25 @@ namespace Game.Kitchen
         public event Action<PlacedInfo> OnPlaced;
         public event Action<int> OnRemovedFromScene;         // placedId
 
+        Dictionary<string, GameObject> _bubbleMap;
+
         void Awake()
         {
             if (Instance != null && Instance != this) { Destroy(gameObject); return; }
             Instance = this;
             DontDestroyOnLoad(gameObject);
 
+            _bubbleMap = new Dictionary<string, GameObject>
+            {
+                ["ice_maker"] = bubbleBtnPrefab_ice,
+                ["shaker"] = bubbleBtnPrefab_shaker,
+            };
+
             Debug.Log($"[KitchenManager] awake on {gameObject.name} (scene={gameObject.scene.name})", gameObject);
         }
+
+        GameObject GetBubblePrefab(string toolId)
+        => _bubbleMap.TryGetValue(toolId, out var prefab) ? prefab : bubbleBtnPrefab_gold;
 
         public KitchenItemData GetData(string toolId) => catalog?.Get(toolId);
 
@@ -129,7 +140,9 @@ namespace Game.Kitchen
                     if (placedTool)
                     {
                         var toolId = placedTool.GetComponent<LongPressRelocate>().toolId;
-                        var bubblePrefab = toolId == "ice_maker" ? bubbleBtnPrefab_ice : bubbleBtnPrefab_gold;
+                        var bubblePrefab = GetBubblePrefab(toolId)
+                        ? prefab
+                        : bubbleBtnPrefab_shaker; //일단 기본은 골드 얻는 shaker로
                         placedTool.Init(bubblePanel, bubblePrefab, Camera.main);
                     }
                     go.layer = LayerMask.NameToLayer("UI");

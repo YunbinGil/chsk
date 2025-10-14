@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 5846423915342568954}
   - component: {fileID: 1399735467330196752}
   m_Layer: 5
-  m_Name: BubbleBtn-gold
+  m_Name: BubbleBtn-shaker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
