@@ -3,6 +3,8 @@ using UnityEngine.UI;
 using chsk.UI.IceMaker;
 using chsk.GamePlay.Production;
 using chsk.UI.Common;
+using chsk.Core.Data;
+using chsk.Core.Services;
 
 namespace chsk.UI.Bubble
 {
@@ -15,6 +17,8 @@ namespace chsk.UI.Bubble
         [SerializeField] private Button bubbleButton;                // 버블(클릭용 버튼)
         [SerializeField] private GameObject iceImg;
         private GameObject _imStatusPanelInstance;
+        private CurrencyManager currencyManager = CurrencyManager.Instance;
+        private IceMakerManager imManager = IceMakerManager.Instance;
         
 
         void Awake()
@@ -23,8 +27,7 @@ namespace chsk.UI.Bubble
                 iceMakerPanel = GameObject.Find("Panel.IceMaker");
             if (bubbleButton == null)
                 bubbleButton = GetComponent<Button>();
-            if (!controller) controller = GetComponentInParent<IceProductionController>(true);
-
+            if (!controller) controller = GetComponentInParent<IceProductionController>(true); 
             bubbleButton.onClick.AddListener(OnBubbleClicked);
             ApplyStatusToUI(controller ? controller.Status : IceProductionController.ProdStatus.Idle);
         }
@@ -61,6 +64,7 @@ namespace chsk.UI.Bubble
                         ShowStatusPanel(); // 진행중 패널 켜기
                         break;
                     case IceProductionController.ProdStatus.Done:
+                        currencyManager.Add(CurrencyType.Ice, imManager.GetPrdIce(controller.ItemId)); // TODO: 재화 추가
                         controller.Status = IceProductionController.ProdStatus.Idle; // 완료 → 대기
                         break;
                 }
@@ -104,7 +108,7 @@ namespace chsk.UI.Bubble
             {
                 case IceProductionController.ProdStatus.Idle:
                     if (iceImg) iceImg.SetActive(false);
-                    // DestroyStatusPanelInstanceIfAny();
+                    DestroyStatusPanelInstanceIfAny();
                     break;
 
                 case IceProductionController.ProdStatus.Generating:
@@ -113,9 +117,8 @@ namespace chsk.UI.Bubble
                     break;
 
                 case IceProductionController.ProdStatus.Done:
-                    SetChildrenActive(false);
                     if (iceImg) iceImg.SetActive(true);
-                    // DestroyStatusPanelInstanceIfAny();
+                    DestroyStatusPanelInstanceIfAny();
                     break;
             }
         }
@@ -134,7 +137,7 @@ namespace chsk.UI.Bubble
             if (!imStatusPanelPrefab || !iceMakerPanel) return;
 
             // 1) 없으면 생성
-            if (_imStatusPanelInstance == null) 
+            if (_imStatusPanelInstance == null)
                 _imStatusPanelInstance = Instantiate(imStatusPanelPrefab, iceMakerPanel.transform.parent);
 
             if (_imStatusPanelInstance == null) return;

@@ -47,7 +47,7 @@ namespace chsk.Core.Services
             return d != null;
         }
         public Sprite GetIcon(string itemId) => GetData(itemId)?.icon;
-        public string GetPrdIce(string itemId) => GetData(itemId)?.prdIce.ToString();
+        public int GetPrdIce(string itemId) => GetData(itemId).prdIce;
         public string GetTime(string itemId) => GetData(itemId)?.time.ToString();
 
     }

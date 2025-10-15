@@ -52,7 +52,7 @@ namespace chsk.UI.IceMaker
             {
                 if (priceText) priceText.text = price.ToString();
             }
-            if (iceText) iceText.text = imManager.GetPrdIce(id) ?? iceText.text;
+            if (iceText) iceText.text = imManager.GetPrdIce(id).ToString() ?? iceText.text;
             if (timeText) timeText.text = imManager.GetTime(id) ?? timeText.text;
             if (iconImage) iconImage.sprite = imManager.GetIcon(id) ?? iconImage.sprite;
             

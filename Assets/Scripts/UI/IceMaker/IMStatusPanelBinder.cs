@@ -14,7 +14,7 @@ namespace chsk.UI.IceMaker
     public class IMStatusPanelBinder : MonoBehaviour
     {
         [Header("카탈로그 제공자 IceMakerManager)")]
-        [SerializeField] private IceMakerManager imManager;
+        [SerializeField] private IceMakerManager imManager = IceMakerManager.Instance;
 
         [Header("아이템 식별자")]
         [SerializeField] private string id;
@@ -57,7 +57,7 @@ namespace chsk.UI.IceMaker
         {
             if (imManager == null || string.IsNullOrEmpty(id)) return;
             if (iconImage) iconImage.sprite = imManager.GetIcon(id);
-            if (iceText) iceText.text = imManager.GetPrdIce(id);
+            if (iceText) iceText.text = imManager.GetPrdIce(id).ToString();
             if (timeText) timeText.text = imManager.GetTime(id);
         }
     }
