@@ -6,12 +6,6 @@ using UnityEngine.UI;
 using chsk.Core.Data;
 using chsk.Core.Services;
 
-
-/// <summary>
-/// itemId만 넣으면, 선택한 Provider(Spice/Kitchen 등)에서
-/// 가격/이름/아이콘을 읽어와 UI에 바인딩해 주는 범용 바인더.
-/// </summary>
-
 namespace chsk.UI.IceMaker
 {
     public class IMCellCatalogBinder : MonoBehaviour

@@ -37,7 +37,6 @@ namespace chsk.Core.Services
             //결제
             var cm = CurrencyManager.Instance;
             if (cm != null && !cm.TrySpend(CurrencyType.Gold, data.priceGold)) return false;
-            
             return true;
 
         }

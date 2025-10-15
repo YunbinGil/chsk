@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9097677475904070022}
   - component: {fileID: 7559213835740290319}
   - component: {fileID: 2890805652538744245}
+  - component: {fileID: 7807016468906120174}
   m_Layer: 0
   m_Name: PlaceableTool
   m_TagString: Untagged
@@ -117,7 +118,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sr: {fileID: 8355906231973016933}
-  col: {fileID: 0}
 --- !u!61 &2890805652538744245
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -164,3 +164,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.59375, y: 0.78125}
   m_EdgeRadius: 0
+--- !u!114 &7807016468906120174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7752361857025283783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ad3506c36151134198cf849ecbecad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 

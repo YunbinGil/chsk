@@ -223,6 +223,7 @@ GameObject:
   - component: {fileID: 756405865980815750}
   - component: {fileID: 5065620317155998085}
   - component: {fileID: -7422902890142621107}
+  - component: {fileID: 2999946487233864416}
   m_Layer: 5
   m_Name: BubbleBtn-ice
   m_TagString: Untagged
@@ -333,3 +334,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2999946487233864416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7118212163617041234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e3c6af8d00dff749abb93ea44de7c48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iceMakerPanel: {fileID: 0}
+  imDonePanelPrefab: {fileID: 0}
+  bubbleButton: {fileID: -7422902890142621107}
+  iceImg: {fileID: 271283108833497515}
+  status: 0
