@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using chsk.Core.Data;
 using chsk.UI.Kitchen;
+using System.Collections.Generic;
 
 namespace chsk.Gameplay.Placement {
     public class KitchenPlacementController : MonoBehaviour
@@ -16,6 +17,10 @@ namespace chsk.Gameplay.Placement {
         [Header("Buttons (V / X / Home)")]
         [SerializeField] private GameObject buttonsRowPrefab; // 세 개 버튼 수평 정렬된 UI(월드캔버스)
         [SerializeField] private Vector3 buttonsOffset = new Vector3(0, -1.6f, 0);
+
+        [Header("UI Roots")]
+        [SerializeField] private Canvas overlayCanvas;      // Screen Space - Overlay 캔버스 지정
+        [SerializeField] private CanvasGroup otherUiGroup;  // 다른 UI의 루트 CanvasGroup (Panel.IceMaker 포함 루트)
 
         Camera _cam;
         GameObject _ghost;
@@ -49,6 +54,9 @@ namespace chsk.Gameplay.Placement {
         {
             EndPreview(); // 안전 초기화
 
+            // ★ 다른 UI 클릭 막기
+            if (otherUiGroup) otherUiGroup.blocksRaycasts = false;
+
             _current = data;
             _blockMask = blockMask;
             _placedMask = placedMask;
@@ -80,6 +88,8 @@ namespace chsk.Gameplay.Placement {
         public void EndPreview()
         {
             _active = false;
+             // ★ 다시 켜주기
+            if (otherUiGroup) otherUiGroup.blocksRaycasts = true;
             if (_ghost) Destroy(_ghost);
             if (_buttonsRow) Destroy(_buttonsRow);
             _ghost = null; _ghostSr = null; _buttonsRow = null;

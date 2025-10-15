@@ -43,7 +43,11 @@ namespace chsk.UI.Bubble
         /// <summary>버블이 클릭되면 이 본체를 현재 선택으로 등록하고, Idle이면 선택 패널을 열어준다.</summary>
         void OnBubbleClicked()
         {
-            if (controller) IceMakerUIContext.CurrentController = controller;
+            if (controller)
+            {
+                IceMakerUIContext.SetCurrent(controller);
+                 Debug.Log($"[Bubble] Selected controller = {controller.name} ({controller.GetInstanceID()})", controller);
+            }
             if (controller && controller.Status == IceProductionController.ProdStatus.Idle)
             {
                 if (iceMakerPanel) iceMakerPanel.SetActive(true);

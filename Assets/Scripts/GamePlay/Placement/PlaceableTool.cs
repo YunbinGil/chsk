@@ -42,7 +42,10 @@ namespace chsk.Gameplay.Placement
             
             // 버블이 이 컨트롤러를 바라보게 연결
             var bubble = go.GetComponent<chsk.UI.Bubble.IceBubble>();
-            if (bubble) bubble.SetController(ctrl);
+            if (bubble) {
+                bubble.SetController(ctrl); 
+                Debug.Log($"[PlaceableTool] Injected controller into bubble: {ctrl.name} ({ctrl.GetInstanceID()})", ctrl);
+                }
             
 
             SetBubbleActive(true);

@@ -39,23 +39,29 @@ namespace chsk.UI.IceMaker
                 genButton.onClick.RemoveAllListeners();
                 genButton.onClick.AddListener(OnClickGenerate);
             }
+            // 시작 시 컨텍스트 없으면 비활성
+            genButton.interactable = IceMakerUIContext.CurrentController != null;
+             // 컨텍스트 변경에 따라 버튼 상태 자동 갱신    
+            IceMakerUIContext.OnCurrentChanged += HandleCurrentChanged;
         }
 
         void OnClickGenerate()
         {
             if (imManager == null || binder == null) return;
 
-            var ok = imManager.TryGenerate(binder.ItemId);
-            if (!ok) return;
-
             var ctrl = IceMakerUIContext.CurrentController;
             if (!ctrl) ctrl = GetComponentInParent<IceProductionController>(true);
-            
+
             if (!ctrl)
             {
                 Debug.LogWarning("[IMCellGenerateBtn] No IceProductionController found (placedTool not ready?)");
                 return;
             }
+            Debug.Log($"[GenerateBtn] Using controller = {ctrl.name} ({ctrl.GetInstanceID()}), item = {binder.ItemId}", ctrl);
+            
+            var ok = imManager.TryGenerate(binder.ItemId);
+            if (!ok) return;
+
             ctrl.SetItemId(binder.ItemId);
 
             var data = imManager.GetData(binder.ItemId);
@@ -64,6 +70,19 @@ namespace chsk.UI.IceMaker
 
             ctrl.BeginProduction(sec);
         }
+        
+         void OnDestroy()
+        {
+            IceMakerUIContext.OnCurrentChanged -= HandleCurrentChanged;
+        }
+
+        void HandleCurrentChanged(IceProductionController c)
+        {
+            // 선택된 본체가 있을 때만 누를 수 있게
+            genButton.interactable = (c != null);
+        }
+
+
 
     }
 }
