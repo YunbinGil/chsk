@@ -50,7 +50,12 @@ namespace chsk.UI.Bubble
             }
             if (controller && controller.Status == IceProductionController.ProdStatus.Idle)
             {
-                if (iceMakerPanel) iceMakerPanel.SetActive(true);
+                if (iceMakerPanel)
+                {
+                    iceMakerPanel.SetActive(true);
+                    iceMakerPanel.GetComponent<CanvasGroup>().blocksRaycasts = true;
+                    iceMakerPanel.GetComponent<CanvasGroup>().alpha = 1f;
+                }
                 SetChildrenActive(true);
                 if (iceImg) iceImg.SetActive(false);
             }
