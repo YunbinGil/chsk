@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using chsk.UI.IceMaker;
 using chsk.GamePlay.Production;
+using chsk.UI.Common;
 
 namespace chsk.UI.Bubble
 {
@@ -25,8 +26,6 @@ namespace chsk.UI.Bubble
             if (!controller) controller = GetComponentInParent<IceProductionController>(true);
 
             bubbleButton.onClick.AddListener(OnBubbleClicked);
-            // 초기 UI 스냅샷
-            ApplyStatusToUI(controller ? controller.Status : IceProductionController.ProdStatus.Idle);
         }
 
         void OnEnable()
@@ -46,19 +45,22 @@ namespace chsk.UI.Bubble
             if (controller)
             {
                 IceMakerUIContext.SetCurrent(controller);
-                 Debug.Log($"[Bubble] Selected controller = {controller.name} ({controller.GetInstanceID()})", controller);
+                Debug.Log($"[Bubble] Selected controller = {controller.name} ({controller.GetInstanceID()})", controller);
             }
-            if (controller && controller.Status == IceProductionController.ProdStatus.Idle)
+            switch (controller?.Status)
             {
-                if (iceMakerPanel)
-                {
-                    iceMakerPanel.SetActive(true);
-                    iceMakerPanel.GetComponent<CanvasGroup>().blocksRaycasts = true;
-                    iceMakerPanel.GetComponent<CanvasGroup>().alpha = 1f;
-                }
-                SetChildrenActive(true);
-                if (iceImg) iceImg.SetActive(false);
+                case IceProductionController.ProdStatus.Idle:
+                    iceMakerPanel.GetComponent<UIPanel>().Open();
+                    SetChildrenActive(true);
+                    break;
+                case IceProductionController.ProdStatus.Generating:
+                    EnsureStatusPanelInstance(); // 진행중 패널 켜기
+                    break;
+                case IceProductionController.ProdStatus.Done:
+                    // 완료 시 패널 열지 않음
+                    break;
             }
+            
         }
 
         /// <summary>컨트롤러 → 버블 주입(구독 해제/재구독 + 즉시 상태 반영)</summary>
@@ -95,21 +97,18 @@ namespace chsk.UI.Bubble
             switch (status)
             {
                 case IceProductionController.ProdStatus.Idle:
-                    iceMakerPanel.SetActive(true);
-                    SetChildrenActive(true);
                     if (iceImg) iceImg.SetActive(false);
                     DestroyStatusPanelInstanceIfAny();
                     break;
 
                 case IceProductionController.ProdStatus.Generating:
-                    iceMakerPanel.SetActive(false);
+                    iceMakerPanel.GetComponent<UIPanel>().Close();
                     SetChildrenActive(false);
                     if (iceImg) iceImg.SetActive(false);
-                    EnsureStatusPanelInstance(); // 진행중 패널 켜기
                     break;
 
                 case IceProductionController.ProdStatus.Done:
-                    iceMakerPanel.SetActive(false);
+                    iceMakerPanel.GetComponent<UIPanel>().Close();
                     SetChildrenActive(false);
                     if (iceImg) iceImg.SetActive(true);
                     DestroyStatusPanelInstanceIfAny();

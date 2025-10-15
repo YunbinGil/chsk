@@ -346,8 +346,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e3c6af8d00dff749abb93ea44de7c48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 0}
   iceMakerPanel: {fileID: 0}
-  imDonePanelPrefab: {fileID: 0}
+  imStatusPanelPrefab: {fileID: 4218628952889507647, guid: 73d0907aabd34d143a94182eb805e0ec, type: 3}
   bubbleButton: {fileID: -7422902890142621107}
   iceImg: {fileID: 271283108833497515}
-  status: 0
