@@ -66,6 +66,7 @@ namespace chsk.UI.Bubble
                     case IceProductionController.ProdStatus.Done:
                         currencyManager.Add(CurrencyType.Ice, imManager.GetPrdIce(controller.ItemId)); // TODO: 재화 추가
                         controller.Status = IceProductionController.ProdStatus.Idle; // 완료 → 대기
+                        Debug.Log($"[Bubble] Status set to Idle, iceImg.activeSelf={iceImg.activeSelf}");
                         break;
                 }
             }
@@ -102,25 +103,27 @@ namespace chsk.UI.Bubble
         /// <summary>본체 상태가 바뀔 때마다 UI 반영</summary>
         void ApplyStatusToUI(IceProductionController.ProdStatus status)
         {
+            Debug.Log($"ApplyStatusToUI: {status}, iceImg.activeSelf={iceImg.activeSelf}, frame={Time.frameCount}");
             if (!iceMakerPanel) return;
 
             switch (status)
             {
                 case IceProductionController.ProdStatus.Idle:
-                    if (iceImg) iceImg.SetActive(false);
+                    iceImg.SetActive(false);
                     DestroyStatusPanelInstanceIfAny();
                     break;
 
                 case IceProductionController.ProdStatus.Generating:
                     SetChildrenActive(false);
-                    if (iceImg) iceImg.SetActive(false);
+                    iceImg.SetActive(false);
                     break;
 
                 case IceProductionController.ProdStatus.Done:
-                    if (iceImg) iceImg.SetActive(true);
+                    iceImg.SetActive(true);
                     DestroyStatusPanelInstanceIfAny();
                     break;
             }
+            Debug.Log($"ApplyStatusToUI: {status}, iceImg.activeSelf={iceImg.activeSelf}, frame={Time.frameCount}");
         }
 
         void SetChildrenActive(bool active)

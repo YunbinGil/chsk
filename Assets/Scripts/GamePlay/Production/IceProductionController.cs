@@ -14,7 +14,19 @@ namespace chsk.GamePlay.Production
         [SerializeField] private string itemId;  // 현재 선택된 생산 아이템
         public string ItemId => itemId;
 
-        public ProdStatus Status { get; set; } = ProdStatus.Idle;
+        ProdStatus _status = ProdStatus.Idle;
+        public ProdStatus Status
+        {
+            get => _status;
+            set
+            {
+                if (_status != value)
+                {
+                    _status = value;
+                    OnStatusChanged?.Invoke(_status);
+                }
+            }
+        }
 
         Coroutine _routine;
 
@@ -24,7 +36,6 @@ namespace chsk.GamePlay.Production
         {
             if (_routine != null) StopCoroutine(_routine);
             Status = ProdStatus.Generating;
-            OnStatusChanged?.Invoke(Status);
             _routine = StartCoroutine(Run(seconds));
         }
 
@@ -33,7 +44,6 @@ namespace chsk.GamePlay.Production
             float end = Time.time + Mathf.Max(1, seconds);
             while (Time.time < end) yield return null;
             Status = ProdStatus.Done;
-            OnStatusChanged?.Invoke(Status);
             _routine = null;
         }
     }
