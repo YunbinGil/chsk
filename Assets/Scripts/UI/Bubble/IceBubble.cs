@@ -26,12 +26,16 @@ namespace chsk.UI.Bubble
             if (!controller) controller = GetComponentInParent<IceProductionController>(true);
 
             bubbleButton.onClick.AddListener(OnBubbleClicked);
+            ApplyStatusToUI(controller ? controller.Status : IceProductionController.ProdStatus.Idle);
         }
 
         void OnEnable()
         {
             if (controller != null)
+            {
                 controller.OnStatusChanged += ApplyStatusToUI;
+                ApplyStatusToUI(controller.Status);
+            }
         }
         void OnDisable()
         {
@@ -46,20 +50,22 @@ namespace chsk.UI.Bubble
             {
                 IceMakerUIContext.SetCurrent(controller);
                 Debug.Log($"[Bubble] Selected controller = {controller.name} ({controller.GetInstanceID()})", controller);
+                
+                switch (controller?.Status)
+                {
+                    case IceProductionController.ProdStatus.Idle:
+                        iceMakerPanel.GetComponent<UIPanel>().Open();
+                        SetChildrenActive(true);
+                        break;
+                    case IceProductionController.ProdStatus.Generating:
+                        ShowStatusPanel(); // 진행중 패널 켜기
+                        break;
+                    case IceProductionController.ProdStatus.Done:
+                        controller.Status = IceProductionController.ProdStatus.Idle; // 완료 → 대기
+                        break;
+                }
             }
-            switch (controller?.Status)
-            {
-                case IceProductionController.ProdStatus.Idle:
-                    iceMakerPanel.GetComponent<UIPanel>().Open();
-                    SetChildrenActive(true);
-                    break;
-                case IceProductionController.ProdStatus.Generating:
-                    EnsureStatusPanelInstance(); // 진행중 패널 켜기
-                    break;
-                case IceProductionController.ProdStatus.Done:
-                    // 완료 시 패널 열지 않음
-                    break;
-            }
+            
             
         }
 
@@ -98,20 +104,18 @@ namespace chsk.UI.Bubble
             {
                 case IceProductionController.ProdStatus.Idle:
                     if (iceImg) iceImg.SetActive(false);
-                    DestroyStatusPanelInstanceIfAny();
+                    // DestroyStatusPanelInstanceIfAny();
                     break;
 
                 case IceProductionController.ProdStatus.Generating:
-                    iceMakerPanel.GetComponent<UIPanel>().Close();
                     SetChildrenActive(false);
                     if (iceImg) iceImg.SetActive(false);
                     break;
 
                 case IceProductionController.ProdStatus.Done:
-                    iceMakerPanel.GetComponent<UIPanel>().Close();
                     SetChildrenActive(false);
                     if (iceImg) iceImg.SetActive(true);
-                    DestroyStatusPanelInstanceIfAny();
+                    // DestroyStatusPanelInstanceIfAny();
                     break;
             }
         }
@@ -125,18 +129,27 @@ namespace chsk.UI.Bubble
         }
 
         /// <summary>상태 패널 인스턴스가 없으면 생성하고, 현재 itemId 바인딩</summary>
-        void EnsureStatusPanelInstance()
+        void ShowStatusPanel()
         {
-            if (_imStatusPanelInstance || !imStatusPanelPrefab || !iceMakerPanel) return;
+            if (!imStatusPanelPrefab || !iceMakerPanel) return;
 
-            _imStatusPanelInstance = Instantiate(imStatusPanelPrefab, iceMakerPanel.transform.parent);
+            // 1) 없으면 생성
+            if (_imStatusPanelInstance == null) 
+                _imStatusPanelInstance = Instantiate(imStatusPanelPrefab, iceMakerPanel.transform.parent);
 
-            // 상태 패널의 바인더에 현재 아이템 id 전달
+            if (_imStatusPanelInstance == null) return;
+
+            // 2) 바인딩(아이템 아이디 갱신은 매번 보장해주는 편이 안전)
             var binder = _imStatusPanelInstance.GetComponent<IMStatusPanelBinder>();
             if (binder && controller != null)
                 binder.SetItemId(controller.ItemId);
+
+            // 3) 다시 열기 (UIPanel 있으면 Open, 없으면 SetActive)
+            var panel = _imStatusPanelInstance.GetComponent<UIPanel>();
+            if (panel != null) panel.Open();
+            else _imStatusPanelInstance.SetActive(true);
         }
-        
+
         /// <summary>상태 패널 인스턴스 제거</summary>
         void DestroyStatusPanelInstanceIfAny()
         {

@@ -568,9 +568,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imManager: {fileID: 0}
-  iconImage: {fileID: 0}
-  iceText: {fileID: 0}
-  timeText: {fileID: 0}
+  id: 
+  iconImage: {fileID: 5177982983853038936}
+  iceText: {fileID: 7930759040357838565}
+  timeText: {fileID: 3876916335102389696}
   bindOnAwake: 1
 --- !u!1 &5828904183099146894
 GameObject:

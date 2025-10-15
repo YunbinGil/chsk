@@ -14,7 +14,7 @@ namespace chsk.GamePlay.Production
         [SerializeField] private string itemId;  // 현재 선택된 생산 아이템
         public string ItemId => itemId;
 
-        public ProdStatus Status { get; private set; } = ProdStatus.Idle;
+        public ProdStatus Status { get; set; } = ProdStatus.Idle;
 
         Coroutine _routine;
 
