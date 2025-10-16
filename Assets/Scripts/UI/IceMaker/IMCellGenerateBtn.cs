@@ -69,7 +69,11 @@ namespace chsk.UI.IceMaker
             if (sec <= 0) sec = 1;
 
             ctrl.BeginProduction(sec);
-            IceMakerUIContext.StartQuickMode(binder.ItemId);
+            
+            if (IceProductionController.HasIdleOtherThan(ctrl))
+                IceMakerUIContext.StartQuickMode(binder.ItemId);
+            else
+                IceMakerUIContext.StopQuickMode();
         }
         
          void OnDestroy()

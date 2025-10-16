@@ -151,6 +151,7 @@ namespace chsk.UI.Bubble
                     break;
 
                 case IceProductionController.ProdStatus.Done:
+                    iceImg.GetComponent<Image>().sprite = imManager.GetIcon(controller.ItemId);
                     iceImg.SetActive(true);
                     DestroyStatusPanelInstanceIfAny();
                     break;

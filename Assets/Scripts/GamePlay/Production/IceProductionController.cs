@@ -2,6 +2,7 @@
 using UnityEngine;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace chsk.GamePlay.Production
 {
@@ -10,6 +11,9 @@ namespace chsk.GamePlay.Production
         public enum ProdStatus { Idle, Generating, Done }
 
         public event Action<ProdStatus> OnStatusChanged;
+
+        public static readonly HashSet<IceProductionController> All = new();
+        public static event System.Action<IceProductionController, bool> OnRegistryChanged;
 
         [SerializeField] private string itemId;  // 현재 선택된 생산 아이템
         public string ItemId => itemId;
@@ -32,6 +36,18 @@ namespace chsk.GamePlay.Production
 
         public void SetItemId(string id) => itemId = id;
 
+        void OnEnable()
+        {
+                All.Add(this);
+                OnRegistryChanged?.Invoke(this, true);
+        }
+
+        void OnDisable()
+        {
+                All.Remove(this);
+                OnRegistryChanged?.Invoke(this, false);
+           
+        }
         public void BeginProduction(int seconds)
         {
             if (_routine != null) StopCoroutine(_routine);
@@ -45,6 +61,14 @@ namespace chsk.GamePlay.Production
             while (Time.time < end) yield return null;
             Status = ProdStatus.Done;
             _routine = null;
+        }
+
+        public static bool HasIdleOtherThan(IceProductionController except = null)
+        {
+            foreach (var c in All)
+                if (c && c != except && c.Status == ProdStatus.Idle)
+                    return true;
+            return false;
         }
     }
 }
