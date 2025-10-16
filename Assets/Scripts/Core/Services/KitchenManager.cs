@@ -141,7 +141,7 @@ namespace chsk.Core.Services
                     if (placedTool)
                     {
                         var bubblePrefab = GetBubblePrefab(tool.toolId);
-                        placedTool.Init(bubblePanel, bubblePrefab, Camera.main);
+                        placedTool.Init(bubblePanel, bubblePrefab, Camera.main, tool.toolId);
                         placedTool.Setup(tool);
                         placedTool.SetBubbleActive(true);
                     }

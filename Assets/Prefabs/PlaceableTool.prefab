@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1d9e0e190b1e4946ab7106226fbc00d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toolId: shaker
+  toolId: 
   holdSec: 0.5
 --- !u!114 &7559213835740290319
 MonoBehaviour:

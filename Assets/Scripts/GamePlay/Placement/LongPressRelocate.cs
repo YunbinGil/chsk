@@ -26,5 +26,6 @@ namespace chsk.Gameplay.Placement{
 
         // 설치 프리팹 루트에 붙이고, 해당 프리팹의 toolId 셋업
         public void SetToolId(string id) => toolId = id;
+        public string GetToolId() => toolId;
     }
 }

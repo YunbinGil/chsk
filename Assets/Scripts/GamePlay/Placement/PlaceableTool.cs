@@ -19,12 +19,14 @@ namespace chsk.Gameplay.Placement
         Camera cam;
 
         RectTransform bubbleRt;
+        string toolId;
 
-        public void Init(RectTransform panel, GameObject prefab, Camera worldCam)
+        public void Init(RectTransform panel, GameObject prefab, Camera worldCam, string id)
         {
             bubblePanel = panel;
             bubblePrefab = prefab;
             cam = worldCam;
+            toolId = id;
 
             SpawnBubble();
         }
@@ -35,17 +37,23 @@ namespace chsk.Gameplay.Placement
             var go = Instantiate(bubblePrefab, bubblePanel, false);
             bubbleRt = go.GetComponent<RectTransform>();
 
-            // 본체(이 PlaceableTool)에 컨트롤러가 없다면 추가
-            var ctrl = GetComponent<IceProductionController>();
-            if (!ctrl) ctrl = gameObject.AddComponent<IceProductionController>();
+            Debug.Log($"[PlaceableTool] Spawned bubble for toolId: {toolId}", this);
+            if (toolId.Contains("ice_maker"))
+            {
+                // 본체(이 PlaceableTool)에 컨트롤러가 없다면 추가
+                var ctrl = GetComponent<IceProductionController>();
+                if (!ctrl) ctrl = gameObject.AddComponent<IceProductionController>();
 
-            
-            // 버블이 이 컨트롤러를 바라보게 연결
-            var bubble = go.GetComponent<chsk.UI.Bubble.IceBubble>();
-            if (bubble) {
-                bubble.SetController(ctrl); 
-                Debug.Log($"[PlaceableTool] Injected controller into bubble: {ctrl.name} ({ctrl.GetInstanceID()})", ctrl);
+
+                // 버블이 이 컨트롤러를 바라보게 연결
+                var bubble = go.GetComponent<chsk.UI.Bubble.IceBubble>();
+                if (bubble)
+                {
+                    bubble.SetController(ctrl);
+                    Debug.Log($"[PlaceableTool] Injected controller into bubble: {ctrl.name} ({ctrl.GetInstanceID()})", ctrl);
                 }
+            }
+            
             
 
             SetBubbleActive(true);
