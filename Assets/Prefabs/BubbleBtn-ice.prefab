@@ -134,7 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -351,3 +351,4 @@ MonoBehaviour:
   imStatusPanelPrefab: {fileID: 4218628952889507647, guid: 73d0907aabd34d143a94182eb805e0ec, type: 3}
   bubbleButton: {fileID: -7422902890142621107}
   iceImg: {fileID: 271283108833497515}
+  bubbleText: {fileID: 2822347570043724709}

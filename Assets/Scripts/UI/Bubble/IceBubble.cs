@@ -5,6 +5,7 @@ using chsk.GamePlay.Production;
 using chsk.UI.Common;
 using chsk.Core.Data;
 using chsk.Core.Services;
+using TMPro;
 
 namespace chsk.UI.Bubble
 {
@@ -16,6 +17,8 @@ namespace chsk.UI.Bubble
         [SerializeField] private GameObject imStatusPanelPrefab;     // 상태 패널 프리팹(진행/남은시간 등)
         [SerializeField] private Button bubbleButton;                // 버블(클릭용 버튼)
         [SerializeField] private GameObject iceImg;
+        [SerializeField] private TMP_Text bubbleText;
+        
         private GameObject _imStatusPanelInstance;
         private CurrencyManager currencyManager = CurrencyManager.Instance;
         private IceMakerManager imManager = IceMakerManager.Instance;
@@ -81,7 +84,7 @@ namespace chsk.UI.Bubble
                 }
                 
                 // === 일반 흐름 (퀵모드 아니거나 Idle이 아닌 경우) ===
-                switch (controller?.Status)
+                switch (controller.Status)
                 {
                     case IceProductionController.ProdStatus.Idle:
                         iceMakerPanel.GetComponent<UIPanel>().Open();
@@ -137,11 +140,13 @@ namespace chsk.UI.Bubble
             {
                 case IceProductionController.ProdStatus.Idle:
                     iceImg.SetActive(false);
+                    bubbleText.text = "...";
                     DestroyStatusPanelInstanceIfAny();
                     break;
 
                 case IceProductionController.ProdStatus.Generating:
                     SetChildrenActive(false);
+                    bubbleText.text = "~.~";
                     iceImg.SetActive(false);
                     break;
 
