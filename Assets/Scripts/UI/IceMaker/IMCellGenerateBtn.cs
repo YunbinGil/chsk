@@ -69,6 +69,7 @@ namespace chsk.UI.IceMaker
             if (sec <= 0) sec = 1;
 
             ctrl.BeginProduction(sec);
+            IceMakerUIContext.StartQuickMode(binder.ItemId);
         }
         
          void OnDestroy()

@@ -47,13 +47,40 @@ namespace chsk.UI.Bubble
         }
 
         /// <summary>버블이 클릭되면 이 본체를 현재 선택으로 등록하고, Idle이면 선택 패널을 열어준다.</summary>
-        void OnBubbleClicked()
+        public void OnBubbleClicked()
         {
             if (controller)
             {
                 IceMakerUIContext.SetCurrent(controller);
                 Debug.Log($"[Bubble] Selected controller = {controller.name} ({controller.GetInstanceID()})", controller);
+
+                // === Quick Produce Mode: 같은 메뉴 바로 생산 ===
+                if (IceMakerUIContext.QuickModeActive
+                    && controller.Status == IceProductionController.ProdStatus.Idle)
+                {
+                    var itemId = IceMakerUIContext.QuickItemId;
+                    if (!string.IsNullOrEmpty(itemId) && imManager != null)
+                    {
+                        // 결제부터 시도 (돈 부족하면 false)
+                        if (imManager.TryGenerate(itemId))
+                        {
+                            // 결제 OK → 바로 생산
+                            controller.SetItemId(itemId);
+                            var data = imManager.GetData(itemId);
+                            int sec = data != null ? data.time.ToSeconds() : 1;
+                            controller.BeginProduction(sec);
+                            return; // 패널 열지 않고 끝
+                        }
+                        else
+                        {
+                            // 돈이 부족하면 패널 열어서 안내/다른 메뉴 선택하도록
+                            Debug.Log("[Bubble] QuickMode generate failed (not enough currency) → open panel");
+                            // 퀵모드 유지할지 끌지는 취향인데, 보통 유지
+                        }
+                    }
+                }
                 
+                // === 일반 흐름 (퀵모드 아니거나 Idle이 아닌 경우) ===
                 switch (controller?.Status)
                 {
                     case IceProductionController.ProdStatus.Idle:
