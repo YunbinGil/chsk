@@ -57,6 +57,7 @@ namespace chsk.UI.IceMaker
                 Debug.LogWarning("[IMCellGenerateBtn] No IceProductionController found (placedTool not ready?)");
                 return;
             }
+            IceMakerUIContext.SetCurrent(ctrl);
             Debug.Log($"[GenerateBtn] Using controller = {ctrl.name} ({ctrl.GetInstanceID()}), item = {binder.ItemId}", ctrl);
             
             var ok = imManager.TryGenerate(binder.ItemId);

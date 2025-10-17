@@ -9,6 +9,7 @@ public class QuickModeWatcher : MonoBehaviour
     {
         IceMakerUIContext.OnQuickModeChanged += OnQuickChanged;
         IceProductionController.OnRegistryChanged += OnRegistryChanged;
+        IceMakerUIContext.OnCurrentChanged += OnCurrentChanged;
 
         // 씬 시작 시 퀵모드가 이미 켜져있을 수도 있으니 한 번 정합 체크
         if (IceMakerUIContext.QuickModeActive)
@@ -19,8 +20,14 @@ public class QuickModeWatcher : MonoBehaviour
     {
         IceMakerUIContext.OnQuickModeChanged -= OnQuickChanged;
         IceProductionController.OnRegistryChanged -= OnRegistryChanged;
+        IceMakerUIContext.OnCurrentChanged -= OnCurrentChanged;
         HookAllControllers(false);
     }
+    void OnCurrentChanged(IceProductionController c) // ★ 추가
+{
+    if (IceMakerUIContext.QuickModeActive) Reevaluate();
+}
+
 
     void OnQuickChanged(bool active, string itemId)
     {
@@ -56,8 +63,17 @@ public class QuickModeWatcher : MonoBehaviour
 
     void Reevaluate()
     {
-        // Idle이 하나도 없으면 퀵모드 종료
-        if (!IceProductionController.HasIdleOtherThan(null))
+        var cur = IceMakerUIContext.CurrentController; // null이면 안전하게 즉시 종료해도 됨
+        var toolId = cur ? cur.ToolId : null;
+
+        if (string.IsNullOrEmpty(toolId))
+        {
+            // 기준 라인을 알 수 없으면 보수적으로 끈다(혹은 전역 판단으로 유지하고 싶으면 아래 줄을 바꿔)
+            IceMakerUIContext.StopQuickMode();
+            return;
+        }
+
+        if (!IceProductionController.HasIdleForTool(toolId))
             IceMakerUIContext.StopQuickMode();
     }
 }

@@ -9,6 +9,8 @@ namespace chsk.GamePlay.Production
     public class IceProductionController : MonoBehaviour
     {
         public enum ProdStatus { Idle, Generating, Done }
+        public string ToolId { get; private set; }
+        public void SetToolId(string toolId) => ToolId = toolId;
 
         public event Action<ProdStatus> OnStatusChanged;
 
@@ -67,6 +69,13 @@ namespace chsk.GamePlay.Production
         {
             foreach (var c in All)
                 if (c && c != except && c.Status == ProdStatus.Idle)
+                    return true;
+            return false;
+        }
+        public static bool HasIdleForTool(string toolId, IceProductionController except = null)
+        {
+            foreach (var c in All)
+                if (c && c != except && c.Status == ProdStatus.Idle && c.ToolId == toolId)
                     return true;
             return false;
         }

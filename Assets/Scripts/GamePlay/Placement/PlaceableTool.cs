@@ -5,6 +5,7 @@ using chsk.Core.Data;
 using chsk.Gameplay.Placement;
 using chsk.GamePlay.Production;
 using chsk.UI.IceMaker;
+using chsk.UI.Bubble;
 
 namespace chsk.Gameplay.Placement
 {
@@ -44,9 +45,10 @@ namespace chsk.Gameplay.Placement
                 var ctrl = GetComponent<IceProductionController>();
                 if (!ctrl) ctrl = gameObject.AddComponent<IceProductionController>();
 
-
+                ctrl.SetToolId(toolId);
+                
                 // 버블이 이 컨트롤러를 바라보게 연결
-                var bubble = go.GetComponent<chsk.UI.Bubble.IceBubble>();
+                var bubble = go.GetComponent<IceBubble>();
                 if (bubble)
                 {
                     bubble.SetController(ctrl);
